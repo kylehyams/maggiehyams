@@ -1,2 +1,2 @@
 # Maggie Hyams
-Repository of my sister's website
+Repository for my sister's website
