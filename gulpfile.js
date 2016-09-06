@@ -1,7 +1,11 @@
 // Requirements
 var gulp 		= require('gulp')
 	sass 		= require('gulp-sass')
-	browserSync = require('browser-sync').create();
+	browserSync = require('browser-sync').create()
+	useref		= require('gulp-useref')
+	uglify		= require('gulp-uglify')
+	gulpIf		= require('gulp-if')
+	cssnano		= require('gulp-cssnano');
 
 // Test
 gulp.task('test', function() {
@@ -25,6 +29,29 @@ gulp.task('sass', function() {
 		.pipe(browserSync.reload({
 			stream: true
 		}))
+});
+
+// Concatenate and minify
+gulp.task('useref', function() {
+	return gulp.src('app/*html')
+		.pipe(useref())
+		// Minifies only if it's a JavaScript file
+		.pipe(gulpIf('*.js', uglify()))
+		// Minifies only if it's a CSS file
+		.pipe(gulpIf('*.css', cssnano()))
+		.pipe(gulp.dest('dist'))
+});
+
+// Transfer fonts to Dist
+gulp.task('fonts', function() {
+	return gulp.src('app/fonts/**/*')
+	.pipe(gulp.dest('dist/fonts'))
+});
+
+// Transfer images to Dist
+gulp.task('images', function(){
+  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+  .pipe(gulp.dest('dist/images'))
 });
 
 // Watch
