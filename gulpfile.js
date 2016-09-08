@@ -32,7 +32,9 @@ gulp.task('browserSync', function() {
 gulp.task('sass', function() {
 	return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children directories
 		.pipe(sourcemaps.init())
-		.pipe(sass())
+		.pipe(sass({
+			outputStyle: 'compressed'
+		}))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.reload({
@@ -77,7 +79,7 @@ gulp.task('watch', ['browserSync', 'sass'], function() {
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
-// Watch sequence
+// Default sequence
 gulp.task('default', function(callback) {
 	runSequence(['sass', 'browserSync', 'watch'],
 		callback

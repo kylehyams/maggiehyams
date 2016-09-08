@@ -1,5 +1,23 @@
 @charset "UTF-8";
 
+/// Import Bagnard Sans
+
+@font-face {
+	font-family: 'BagnardSansRegular';
+    src: url('../../../../fonts/BagnardSans.eot'); /* IE9 Compat Modes */
+    src: url('../../../../fonts/BagnardSans.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../../../../fonts/BagnardSans.woff') format('woff'), /* Modern Browsers */
+         url('../../../../fonts/BagnardSans.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../../../../fonts/BagnardSans.svg#BagnardSans') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+///Import Quattrocento Sans and Oswald
+
+@import 'https://fonts.googleapis.com/css?family=Oswald|Quattrocento+Sans';
+
 /// Georgia font stack.
 ///
 /// @type List
@@ -29,3 +47,21 @@ $monospace: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
 /// @type List
 
 $verdana: "Verdana", "Geneva", sans-serif;
+
+/// Bagnard Sans font stack.
+///
+/// @type List
+
+$bagnard-sans: "BagnardSansRegular", "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
+
+/// Quattrocento Sans font stack.
+///
+/// @type List
+
+$verdana: "Quattrocento Sans", "Verdana", "Geneva", sans-serif;
+
+/// Oswald font stack.
+///
+/// @type List
+
+$helvetica: "Oswald", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;

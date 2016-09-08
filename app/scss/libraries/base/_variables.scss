@@ -3,8 +3,8 @@ $medium-screen: 600px;
 $large-screen: 900px;
 
 // Typography
-$base-font-family: $font-stack-system;
-$heading-font-family: $base-font-family;
+$base-font-family: $bagnard-sans;
+$heading-font-family: $bagnard-sans;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -19,18 +19,24 @@ $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
-// Colors
+// Default Colors
 $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 
+// Maggie's Colors
+$pepper: #171717;
+$slate: #525252;
+$fire: #dd5655;
+$marble: #fcfcfc;
+
 // Font Colors
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-font-color: $slate;
+$action-color: $fire;
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: $fire;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
