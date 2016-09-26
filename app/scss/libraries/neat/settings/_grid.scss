@@ -4,13 +4,15 @@
 ///
 /// @type Number (Unit)
 
-$column: 4.2358em !default;
+// $column: 4.2358em !default;
+$column: 8.333333333% !default;
 
 /// Sets the relative width of a single grid gutter. The unit used should be the same one used to define `$column`. Set with the `!global` flag.
 ///
 /// @type Number (Unit)
 
-$gutter: 1.618em !default;
+//$gutter: 1.618em !default;
+$gutter: 0% !default;
 
 /// Sets the total number of columns in the grid. Its value can be overridden inside a media query using the `media()` mixin. Set with the `!global` flag.
 ///
@@ -22,7 +24,8 @@ $grid-columns: 12 !default;
 ///
 /// @type Number (Unit)
 ///
-$max-width: 1200px !default;
+//$max-width: 1200px !default;
+$max-width: 100% !default;
 
 /// When set to true, it sets the box-sizing property of all elements to `border-box`. Set with a `!global` flag.
 ///
