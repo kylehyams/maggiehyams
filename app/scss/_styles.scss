@@ -1,9 +1,9 @@
 .container {
 	@include outer-container;
-	&:before {
+	&:after {
 		content: "";
 		width: 95vw;
-		height: 95vh;
+		height: 97vh;
 		border: solid 1px $fire;
 		position: fixed;
 		top: 50%;
@@ -16,14 +16,12 @@
 .left {
 	@include span-columns(12);
 	background: $slate;
+	width: 100vw;
 	height: 100vh;
-	// @include display(flex);
-	// @include flex-direction(row);
-	// @include justify-content(center);
-	// display: flex;
-	// flex-direction: row;
-	// justify-content: center;
-	// align-items: center;
+	@include display(flex);
+	@include flex-direction(row);
+	@include justify-content(center);
+	@include align-items(flex-end);
 	
 	&:before {
 		content: "";
@@ -37,14 +35,29 @@
 	}
 	
 	&__container {
-		
+		padding: 0 0 80px;
 		position: relative;
 		z-index: 2;
-		// @include flex(1);
 		
-		svg {
+		.logo-primary {
 			width: 150px;
 			height: auto;
+			margin: 0 0 152px;
+		}
+		
+		.scroll-indicator-mobile {
+			border: solid 1px $fire;
+			width: 40px;
+			height: 56px;
+			margin: 0 auto;
+			padding: 15px 11px 0;
+			
+			.arrow {
+				width: 16px;
+				height: 34px;
+				margin: 0 auto;
+			}
+			
 		}
 		
 	}
