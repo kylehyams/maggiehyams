@@ -19,11 +19,13 @@
         <script src=""></script>
     </head>
     <body>
+        <!-- Main container -->
         <div class="container">
 	        
 	        <!-- Left -->
 	        <aside class="left">
 		        <section class="left__container">
+			        <!-- Static version of the primary logo -->
 			        <svg class="logo-primary" viewBox="0 0 200 121" xmlns="http://www.w3.org/2000/svg">
 						<g fill="#FCFCFC" fill-rule="evenodd">
 							<path d="M0 0v120.223338h199.851783V0H0zm6.2453682 113.97797H193.606415V6.2453682H6.2453682V113.97797z"/>
@@ -39,7 +41,7 @@
 								<mask id="b" fill="#fff">
 								  <use xlink:href="#a"/>
 								</mask>
-								<path d="M16 24.2128c-3.405 2.337-5.868 5.584-7.387 9.74H7.387c-1.519-4.156-3.982-7.403-7.387-9.74v-1.803c2.287.768 4.54 2.12 6.761 4.057-1.703-3.539-3.957-6.277-6.761-8.213v-1.778c2.387.801 4.641 2.145 6.761 4.031V-.0002h2.453v20.507c2.12-1.886 4.382-3.23 6.786-4.031v1.778c-2.854 1.953-5.116 4.69-6.786 8.213 2.12-1.903 4.382-3.256 6.786-4.057v1.803z" fill="#DD5655" mask="url(#b)"/>
+								<path d="M16 24.2128c-3.405 2.337-5.868 5.584-7.387 9.74H7.387c-1.519-4.156-3.982-7.403-7.387-9.74v-1.803c2.287.768 4.54 2.12 6.761 4.057-1.703-3.539-3.957-6.277-6.761-8.213v-1.778c2.387.801 4.641 2.145 6.761 4.031V-.0002h2.453v20.507c2.12-1.886 4.382-3.23 6.786-4.031v1.778c-2.854 1.953-5.116 4.69-6.786 8.213 2.12-1.903 4.382-3.256 6.786-4.057v1.803z" fill="#DD5655" mask="url(#b)" />
 							</g>
 						</svg>
 					</div>
@@ -49,11 +51,29 @@
 	        
 	        <!-- Right -->
 	        <article class="right">
-		        <h1>An up-and-coming chef that serves the South Florida area.</h1>
+		        <section class="right__container">
+			        <img class="wordmark" src="images/wordmark.svg" alt="Maggie Hyams wordmark" />
+			        <!-- Knife icon goes here -->
+					<div class="right__container-block">
+						<div class="image-shadow">
+							<img src="images/maggie_hyams-2x.jpg" alt="maggie_hyams-2x" alt="Maggie Hyams at work" />
+						</div>
+				        <h1>An up-and-coming chef that serves the South Florida area.</h1>
+				        <p>Proper cookery renders good food material more digestible. When scientifically done, cooking changes each of the food elements, with the exception of fats, in much the same manner as the digestive juices, and at the same time it breaks up the food by dissolving the soluble portions, so that its elements are more readily acted upon by the digestive fluids.</p>
+					</div>
+					<div class="right__container-block">
+						<div class="image-shadow">
+							<img src="images/cooking_experience-2x.jpg" alt="cooking experience" />
+						</div>
+					</div>
+		        </section>
 	        </article>
 	        <!-- /Right -->
 	        
+	        <section class="inner-border"></section>
+	        
         </div>
+        <!-- /Main container -->
 
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

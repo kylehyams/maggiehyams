@@ -1,0 +1,55 @@
+.right {
+	@include span-columns(12);
+	margin: 56px 0;
+	
+	&__container {
+		@include span-columns(10);
+		@include shift(1);
+		text-align: left;
+		
+		.wordmark {
+			width: 200px;
+			height: auto;
+			margin: 0 0 48px;
+		}
+		
+		&-block {
+			margin: 0 0 56px;
+			
+			.knife-icon {
+				width: 72px;
+				height: auto;
+			}
+			
+			.image-shadow {
+				width: 280px;
+				height: 280px;
+				margin: 0 auto 32px;
+				overflow: visible;
+				position: relative;
+				
+				&:after {
+					content: "";
+					width: 90%;
+					height: 50%;
+					background: $pepper;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translate(-50%, 0);
+					box-shadow: 0 3px 60px 0 rgba($pepper, 0.5);
+					z-index: 0;
+				}
+				
+				img {
+					position: relative;
+					z-index: 1;
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}
