@@ -1,6 +1,8 @@
 .right {
 	@include span-columns(12);
-	margin: 56px 0;
+	padding: 56px 0;
+	position: relative;
+	z-index: 1;
 	
 	&__container {
 		@include span-columns(10);
