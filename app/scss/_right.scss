@@ -24,11 +24,16 @@
 			}
 			
 			.image-shadow {
-				width: 280px;
-				height: 280px;
-				margin: 0 auto 32px;
+				width: 260px;
+				height: 260px;
+				margin: 0 auto;
 				overflow: visible;
 				position: relative;
+				
+				@media screen and (min-width: 360px) {
+					width: 280px;
+					height: 280px;
+				}
 				
 				&:after {
 					content: "";
@@ -48,6 +53,37 @@
 					z-index: 1;
 				}
 				
+			}
+			
+			.block-content {
+				margin: 32px 0 0;
+			}
+			
+		}
+		
+		.scroll-indicator-desktop {
+			border: solid 1px $fire;
+			width: 40px;
+			height: 56px;
+			margin: 0 auto;
+			padding: 15px 11px 0;
+			display: none;
+			
+			.arrow {
+				width: 16px;
+				height: 34px;
+				margin: 0 auto;
+			}
+			
+		}
+		
+		.icon {
+			text-align: center;
+			margin: 88px auto 0;
+			
+			svg {
+				width: 40px;
+				height: auto;
 			}
 			
 		}

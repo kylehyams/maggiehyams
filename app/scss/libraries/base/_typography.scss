@@ -7,6 +7,9 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  font-weight: 400;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -16,6 +19,7 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
+  font-weight: 400;
   // font-size: modular-scale(1);
   // line-height: $heading-line-height;
   // margin: 0 0 $small-spacing;
@@ -24,6 +28,18 @@ h6 {
 h1 {
 	font-size: 2.8rem;
 	line-height: 34px;
+}
+
+h2 {
+	font-size: 2.6rem;
+	line-height: 32px;
+}
+
+h3 {
+	font-size: 1.8rem;
+	letter-spacing: 1;
+	line-height: 22px;
+	margin: 4px 0;
 }
 
 p {
@@ -44,6 +60,30 @@ a {
   &:hover {
     color: shade($action-color, 25%);
   }
+}
+
+ul {
+	margin: 32px 0 0;
+	
+	li {
+		font-size: 1.6rem;
+		letter-spacing: 0.25px;
+		line-height: 24px;
+		margin: 0;
+		padding: 0;
+		
+		&.label {
+			color: $fire;
+			font-family: $oswald;
+			font-size: 1.2rem;
+			font-weight: 400;
+			letter-spacing: 1.5px;
+			line-height: 12px;
+			text-transform: uppercase;
+		}
+		
+	}
+	
 }
 
 hr {
