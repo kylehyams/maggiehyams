@@ -1,0 +1,31 @@
+.image-shadow {
+	width: 260px;
+	height: 260px;
+	margin: 0 auto;
+	overflow: visible;
+	position: relative;
+	
+	@media screen and (min-width: $screen-small) {
+		width: 280px;
+		height: 280px;
+	}
+	
+	&:after {
+		content: "";
+		width: 90%;
+		height: 50%;
+		background: $pepper;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		box-shadow: 0 3px 60px 0 rgba($pepper, 0.5);
+		z-index: 0;
+	}
+	
+	img {
+		position: relative;
+		z-index: 1;
+	}
+	
+}

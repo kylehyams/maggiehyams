@@ -1,0 +1,49 @@
+.content {
+	@include span-columns(12);
+	padding: 56px 0;
+	position: relative;
+	z-index: 1;
+	
+	&__container {
+		@include span-columns(10);
+		@include shift(1);
+		text-align: left;
+		
+		.wordmark {
+			width: 200px;
+			height: auto;
+		}
+		
+		&-block {
+			margin: 56px 0 0;
+			
+			.knife-icon {
+				width: 72px;
+				height: auto;
+			}
+			
+			.block-content {
+				margin: 32px 0 0;
+			}
+			
+		}
+		
+		.scroll-indicator-desktop {
+			border: solid 1px $fire;
+			width: 40px;
+			height: 56px;
+			margin: 0 auto;
+			padding: 15px 11px 0;
+			display: none;
+			
+			.arrow {
+				width: 16px;
+				height: 34px;
+				margin: 0 auto;
+			}
+			
+		}
+		
+	}
+	
+}

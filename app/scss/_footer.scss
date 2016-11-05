@@ -1,0 +1,157 @@
+footer {
+	text-align: center;
+	margin: 56px auto 0;
+	
+	.social-container {
+		text-align: left;
+		width: 100%;
+		padding: 2% 0;
+		border: solid 1px $fire;
+		
+		.social {
+			width: 96%;
+			margin: 0 auto;
+			padding: 16px 16px 24px;
+			border: solid 1px $fire;
+			
+			&__instagram {
+				@include display(flex);
+				@include flex-direction(row);
+				@include justify-content(space-between);
+				@include align-items(flex-end);
+				margin: 0 0 16px;
+				
+				&-link {
+					font-family: $heading-font-family;
+					font-size: 1.5rem;
+					letter-spacing: 0;
+					line-height: 8px;
+					font-weight: 400;
+					margin: 0 8px 0 0;
+					
+					@media screen and (min-width: $screen-small) {
+						font-size: 1.6rem;
+						letter-spacing: 0.25px;
+					}
+					
+				}
+				
+				&-divider {
+					width: 100%;
+					height: 1px;
+					border-bottom: dotted 1px $fire;
+					margin: 0;
+					padding: 0;
+				}
+				
+				&-icon {
+					margin: 0 0 0 8px;
+					
+					a {
+						transition: color $base-duration $base-timing;
+						
+						svg {
+							width: 20px;
+							height: auto;
+							background-position: 0 100%;
+							background-size: contain;
+							position: relative;
+							top: 8px;
+							fill: $action-color;
+							
+							@media screen and (min-width: $screen-small) {
+								width: 23px;
+								top: 7px;
+							}
+							
+						}
+						
+						&:hover {
+							
+							svg {
+								fill: darken($action-color, 20%);
+							}
+							
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+			&__email {
+				@include display(flex);
+				@include flex-direction(row);
+				@include justify-content(space-between);
+				@include align-items(flex-end);
+				margin: 0;
+				
+				&-link {
+					font-family: $heading-font-family;
+					font-size: 1.5rem;
+					letter-spacing: 0;
+					line-height: 8px;
+					font-weight: 400;
+					margin: 0 8px 0 0;
+					
+					@media screen and (min-width: $screen-small) {
+						font-size: 1.6rem;
+						letter-spacing: 0.25px;
+					}
+					
+				}
+				
+				&-divider {
+					width: 100%;
+					height: 1px;
+					border-bottom: dotted 1px $fire;
+					margin: 0;
+					padding: 0;
+				}
+				
+				&-icon {
+					margin: 0 0 0 8px;
+					
+					a {
+						
+						svg {
+							width: auto;
+							height: 20px;
+							background-position: 0 100%;
+							background-size: contain;
+							position: relative;
+							top: 10px;
+							fill: $action-color;
+							
+							@media screen and (min-width: $screen-small) {
+								height: 23px;
+							}
+							
+						}
+						
+						&:hover {
+							
+							svg {
+								fill: darken($action-color, 20%);
+							}
+							
+						}
+												
+					}
+					
+				}
+				
+			}
+			
+		}
+	
+	}
+	
+	.icon {
+		width: 40px;
+		height: auto;
+		margin: 88px 0 0;
+	}
+	
+}

@@ -1,4 +1,4 @@
-.left {
+header {
 	@include span-columns(12);
 	background: $slate;
 	width: 100vw;
@@ -19,7 +19,7 @@
 		opacity: 0.15
 	}
 	
-	&__container {
+	.header-container {
 		padding: 0 0 12vh;
 		position: relative;
 		z-index: 2;
