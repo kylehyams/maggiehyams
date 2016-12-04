@@ -1,49 +1,128 @@
-.content {
-	@include span-columns(12);
-	padding: 56px 0;
-	position: relative;
-	z-index: 1;
-	
-	&__container {
-		@include span-columns(10);
-		@include shift(1);
-		text-align: left;
+@include direction-context(right-to-left) {
+
+	.content {
+		@include span-columns(12);
+		padding: 40px 0 56px;
+		position: relative;
+		z-index: 1;
 		
-		.wordmark {
-			width: 200px;
-			height: auto;
+		@media screen and (min-width: $large-screen) {
+			@include span-columns(7);
+			padding: 0;
 		}
 		
-		&-block {
-			margin: 56px 0 0;
+		.wordmark {
+			@include span-columns(10);
+			@include shift(1);
 			
-			.knife-icon {
-				width: 72px;
+			@media screen and (min-width: $medium-screen) {
+				@include span-columns(8);
+				@include shift(2);
+			}
+			
+			@media screen and (min-width: $large-screen) {
+				@include span-columns(12);
+				@include shift(0);
+				
+				img {
+					position: absolute;
+					top: 64px;
+					right: 64px;
+				}
+				
+			}
+			
+			img {
+				width: 200px;
 				height: auto;
 			}
 			
-			.block-content {
-				margin: 32px 0 0;
-			}
-			
 		}
 		
-		.scroll-indicator-desktop {
-			border: solid 1px $fire;
-			width: 40px;
-			height: 56px;
-			margin: 0 auto;
-			padding: 15px 11px 0;
-			display: none;
+		&__container {
+			@include span-columns(10);
+			@include shift(1);
+			text-align: left;
 			
-			.arrow {
-				width: 16px;
-				height: 34px;
-				margin: 0 auto;
+			@media screen and (min-width: $medium-screen) {
+				@include span-columns(8);
+				@include shift(2);
+			}
+			
+			@media screen and (min-width: $xlarge-screen) {
+				@include span-columns(10);
+				@include shift(1);
+				height: 100vh;
+				@include transform(translateY(35%));
+			}
+			
+			&-block {
+				margin: 56px 0 0;
+				
+				@media screen and (min-width: $large-screen) {
+					margin: 120px 0 0;
+				}
+				
+				&:first-child {
+					@media screen and (min-width: $large-screen) {
+						margin: 0;
+					}
+				}
+				
+				@media screen and (min-width: $xlarge-screen) {
+					@include display(flex);
+					@include flex-direction(row);
+				}
+				
+				&.reverse {
+					@media screen and (min-width: $xlarge-screen) {
+						@include flex-direction(row-reverse);
+						text-align: right;
+					}
+					
+					.block-content {
+						@media screen and (min-width: $xlarge-screen) {
+							margin: 40px 24px 0 0;
+						}
+						
+					}
+					
+				}
+				
+				.knife-icon {
+					width: 72px;
+					height: auto;
+					position: relative;
+					z-index: 2;
+					top: 238px;
+					left: 208px;
+					@include filter(drop-shadow(0 2px 6px rgba($pepper,.25)));
+					
+					@media screen and (min-width: $small-screen) {
+						top: 255px;
+						left: 250px;
+					}
+					
+				}
+				
+				.block-content {
+					margin: 32px 0 0;
+					
+					@media screen and (min-width: $large-screen) {
+						margin: 24px 0 0;
+					}
+					
+					@media screen and (min-width: $xlarge-screen) {
+						max-width: 296px;
+						margin: 40px 0 0 24px;
+					}
+					
+				}
+				
 			}
 			
 		}
 		
 	}
-	
+
 }

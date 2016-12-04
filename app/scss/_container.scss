@@ -6,10 +6,8 @@
 		width: 95vw;
 		height: 97vh;
 		border: solid 1px $fire;
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		@include position(fixed, 50% null null 50%);
+		@include transform(translate(-50%, -50%));
 		background: transparent;
 	}
 	

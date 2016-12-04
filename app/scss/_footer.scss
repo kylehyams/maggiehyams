@@ -2,6 +2,10 @@ footer {
 	text-align: center;
 	margin: 56px auto 0;
 	
+	@media screen and (min-width: $large-screen) {
+		margin: 136px auto 80px;
+	}
+	
 	.social-container {
 		text-align: left;
 		width: 100%;
@@ -29,7 +33,7 @@ footer {
 					font-weight: 400;
 					margin: 0 8px 0 0;
 					
-					@media screen and (min-width: $screen-small) {
+					@media screen and (min-width: $small-screen) {
 						font-size: 1.6rem;
 						letter-spacing: 0.25px;
 					}
@@ -59,7 +63,7 @@ footer {
 							top: 8px;
 							fill: $action-color;
 							
-							@media screen and (min-width: $screen-small) {
+							@media screen and (min-width: $small-screen) {
 								width: 23px;
 								top: 7px;
 							}
@@ -95,7 +99,7 @@ footer {
 					font-weight: 400;
 					margin: 0 8px 0 0;
 					
-					@media screen and (min-width: $screen-small) {
+					@media screen and (min-width: $small-screen) {
 						font-size: 1.6rem;
 						letter-spacing: 0.25px;
 					}
@@ -124,7 +128,7 @@ footer {
 							top: 10px;
 							fill: $action-color;
 							
-							@media screen and (min-width: $screen-small) {
+							@media screen and (min-width: $small-screen) {
 								height: 23px;
 							}
 							
@@ -148,10 +152,15 @@ footer {
 	
 	}
 	
-	.icon {
+	.footer-icon {
 		width: 40px;
 		height: auto;
 		margin: 88px 0 0;
+		
+		@media screen and (min-width: $large-screen) {
+			margin: 212px 0 0;
+		}
+		
 	}
 	
 }

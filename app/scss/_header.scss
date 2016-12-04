@@ -1,22 +1,28 @@
 header {
 	@include span-columns(12);
-	background: $slate;
-	width: 100vw;
 	height: 100vh;
+	background: $slate;
 	@include display(flex);
 	@include flex-direction(row);
 	@include justify-content(center);
 	@include align-items(flex-end);
 	
+	@media screen and (min-width: $large-screen) {
+		@include span-columns(5);
+		@include display(flex);
+		@include align-items(center);
+		position: fixed;
+	}
+	
 	&:before {
 		content: "";
-		width: 100vw;
+		@include span-columns(12);
 		height: 100vh;
 		background: url(../images/hero_background-2x.jpg) 0 0 no-repeat;
 		background-size: cover;
 		position: absolute;
 		z-index: 1;
-		opacity: 0.15
+		opacity: 0.15;
 	}
 	
 	.header-container {
@@ -24,23 +30,21 @@ header {
 		position: relative;
 		z-index: 2;
 		
+		@media screen and (min-width: $large-screen) {
+			padding: 0;
+		}
+		
 		.logo-primary {
 			width: 150px;
 			height: auto;
 			margin: 0 0 23vh;
-		}
-		
-		.scroll-indicator-mobile {
-			border: solid 1px $fire;
-			width: 40px;
-			height: 56px;
-			margin: 0 auto;
-			padding: 15px 11px 0;
 			
-			.arrow {
-				width: 16px;
-				height: 34px;
-				margin: 0 auto;
+			@media screen and (min-width: $medium-screen) {
+				width: 200px;
+			}
+			
+			@media screen and (min-width: $large-screen) {
+				margin: 0;
 			}
 			
 		}

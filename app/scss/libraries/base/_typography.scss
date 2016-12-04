@@ -28,11 +28,23 @@ h6 {
 h1 {
 	font-size: 2.8rem;
 	line-height: 34px;
+	
+	@media screen and (min-width: $large-screen) {
+		font-size: 2.6rem;
+		line-height: 32px;
+	}
+	
 }
 
 h2 {
 	font-size: 2.6rem;
 	line-height: 32px;
+	
+	@media screen and (min-width: $large-screen) {
+		font-size: 2.4rem;
+		line-height: 30px;
+	}
+	
 }
 
 h3 {
@@ -40,6 +52,12 @@ h3 {
 	letter-spacing: 1;
 	line-height: 22px;
 	margin: 4px 0;
+	
+	@media screen and (min-width: $large-screen) {
+		font-size: 1.6rem;
+		line-height: 22px;
+	}
+	
 }
 
 p {
@@ -48,6 +66,12 @@ p {
 	letter-spacing: 0.25px;
 	line-height: 24px;
 	margin: 24px 0 0;
+	
+	@media screen and (min-width: $large-screen) {
+		font-size: 1.4rem;
+		line-height: 22px;
+	}
+	
 }
 
 a {
@@ -71,6 +95,11 @@ ul {
 		line-height: 24px;
 		margin: 0;
 		padding: 0;
+		
+		@media screen and (min-width: $large-screen) {
+			font-size: 1.4rem;
+			line-height: 22px;
+		}
 		
 		&.label {
 			color: $fire;

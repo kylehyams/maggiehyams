@@ -27,7 +27,7 @@
 	        
 	        <!-- Header -->
 	        <header>
-		        <section class="header-container">
+		        <div class="header-container">
 			        <!-- Static version of the primary logo -->
 			        <svg class="logo-primary" viewBox="0 0 200 121" xmlns="http://www.w3.org/2000/svg">
 						<g fill="#FCFCFC" fill-rule="evenodd">
@@ -36,7 +36,7 @@
 						</g>
 					</svg>
 					<!-- Scroll indicator - mobile -->
-					<a href="javascript:;">
+					<a href="#intro-mobile">
 						<div class="scroll-indicator-mobile">
 							<svg class="arrow levitate loop bounce" viewBox="12 11 16 34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 								<defs>
@@ -52,17 +52,19 @@
 						</div>
 					</a>
 					<!-- /Scroll indicator - mobile -->
-		        </section>
+		        </div>
 	        </header>
 	        <!-- /Header -->
 	        
 	        <!-- Content -->
-	        <section class="content" id="content-start">
+	        <div class="content" id="intro-mobile">
+				<div class="wordmark">
+					<img src="images/wordmark.svg" alt="Maggie Hyams wordmark" />
+				</div>
 		        <div class="content__container">
-			        <img class="wordmark" src="images/wordmark.svg" alt="Maggie Hyams wordmark" />
-			        <!-- Knife icon goes here -->
 					<!-- Content block -->
 					<div class="content__container-block">
+<!-- 						<img class="knife-icon" src="images/icon-knife.svg" alt="knife-icon" /> -->
 						<div class="image-shadow">
 							<img src="images/maggie_hyams-2x.jpg" alt="maggie_hyams-2x" alt="Maggie Hyams at work" />
 						</div>
@@ -73,7 +75,7 @@
 					</div>
 					<!-- /Content block -->
 					<!-- Scroll indicator - desktop -->
-					<a href="javascript:;">
+					<a href="#intro-desktop">
 						<div class="scroll-indicator-desktop">
 							<svg class="arrow levitate loop bounce" viewBox="12 11 16 34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 								<defs>
@@ -90,7 +92,7 @@
 					</a>
 					<!-- /Scroll indicator - desktop -->
 					<!-- Content block -->
-					<div class="content__container-block" id="intro-desktop">
+					<div class="content__container-block reverse" id="intro-desktop">
 						<div class="image-shadow">
 							<img src="images/cooking_experience-2x.jpg" alt="cooking experience" />
 						</div>
@@ -140,19 +142,19 @@
 					</div>
 					<!-- /Content block -->
 					<!-- Content block -->
-					<div class="content__container-block">
+					<div class="content__container-block reverse">
 						<div class="image-shadow">
 							<img src="images/cater-2x.jpg" alt="cater" />
 						</div>
 						<div class="block-content">
 							<h2>Maggie is available to cater your event</h2>
 							<p>If you’re cooking your food properly on your barbeque, you’re getting delightful results every time. However, all too frequently, people are falling victims to common barbeque myths.</p>
+							<!-- CTA -->
+							<div class="cta">
+								<a class="cta__button" href="mailto:hello@maggiehyams.com?subject=Inquiry%20from%20maggiehyams.com">Contact Maggie</a>
+							</div>
+							<!-- /CTA -->
 						</div>
-						<!-- CTA -->
-						<div class="cta">
-							<a class="cta__button" href="javascript:;">Contact Maggie</a>
-						</div>
-						<!-- /CTA -->
 					</div>
 					<!-- /Content block -->
 					<!-- Footer -->
@@ -175,7 +177,7 @@
 								<!-- /Instagram -->
 								<!-- Email -->
 								<ul class="social__email">
-									<li class="social__email-link"><a href="mailto:hello@maggiehyams.com">hello&commat;maggiehyams.com</a></li>
+									<li class="social__email-link"><a href="mailto:hello@maggiehyams.com?subject=Inquiry%20from%20maggiehyams.com">hello&commat;maggiehyams.com</a></li>
 									<li class="social__email-divider"></li>
 									<li class="social__email-icon">
 										<a href="mailto:hello@maggiehyams.com">
@@ -189,14 +191,14 @@
 							</div>
 						</div>
 						<!-- /Social -->
-						<img class="icon" src="images/icon.svg" alt="Maggie Hyams icon" />
+						<img class="footer-icon" src="images/icon.svg" alt="Maggie Hyams icon" />
 					</footer>
 					<!-- /Footer -->
 		        </div>
 	        </div>
 	        <!-- /Content -->
 	        
-<!-- 	        <div class="inner-border"></div> -->
+	        <div class="inner-border"></div>
 	        
         </section>
         <!-- /Main container -->
