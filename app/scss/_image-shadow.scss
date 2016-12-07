@@ -27,7 +27,11 @@
 		z-index: 0;
 		
 		@media screen and (min-width: $xlarge-screen) {
-			bottom: 1px;
+			bottom: 22px;
+		}
+		
+		@media screen and (min-width: $xxlarge-screen) {
+			bottom: 0;
 		}
 		
 	}

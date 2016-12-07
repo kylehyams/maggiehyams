@@ -1,122 +1,113 @@
 @include direction-context(right-to-left) {
 
 	.content {
-		@include span-columns(12);
-		padding: 40px 0 56px;
+		@include span-columns(10);
+		@include shift(1);
 		position: relative;
 		z-index: 1;
+		padding: 56px 0;
+		
+		@media screen and (min-width: $medium-screen) {
+			@include span-columns(8);
+			@include shift(2);
+		}
 		
 		@media screen and (min-width: $large-screen) {
 			@include span-columns(7);
+			@include shift(0);
 			padding: 0;
 		}
 		
 		.wordmark {
-			@include span-columns(10);
-			@include shift(1);
-			
-			@media screen and (min-width: $medium-screen) {
-				@include span-columns(8);
-				@include shift(2);
-			}
-			
-			@media screen and (min-width: $large-screen) {
-				@include span-columns(12);
-				@include shift(0);
-				
-				img {
-					position: absolute;
-					top: 64px;
-					right: 64px;
-				}
-				
-			}
 			
 			img {
 				width: 200px;
 				height: auto;
+				
+				@media screen and (min-width: $large-screen) {
+					position: absolute;
+					top: 40px;
+					right: 64px;
+				}
+				
+				@media screen and (min-width: $xlarge-screen) {
+					top: 64px;
+				}
+				
 			}
 			
 		}
 		
-		&__container {
-			@include span-columns(10);
-			@include shift(1);
-			text-align: left;
+		&__intro {
+			margin: 48px 0 0;
 			
-			@media screen and (min-width: $medium-screen) {
-				@include span-columns(8);
-				@include shift(2);
-			}
-			
-			@media screen and (min-width: $xlarge-screen) {
-				@include span-columns(10);
-				@include shift(1);
+			@media screen and (min-width: $large-screen) {
+				width: 71.42857143%;
 				height: 100vh;
-				@include transform(translateY(35%));
+				@include display(flex);
+				@include flex-direction(column);
+				@include justify-content(flex-end);
+				margin: 0 auto;
+				padding: 0 0 5.25vh;
 			}
 			
-			&-block {
-				margin: 56px 0 0;
-				
-				@media screen and (min-width: $large-screen) {
-					margin: 120px 0 0;
-				}
-				
-				&:first-child {
-					@media screen and (min-width: $large-screen) {
-						margin: 0;
-					}
-				}
+			&-block {	
+				width: 100%;
 				
 				@media screen and (min-width: $xlarge-screen) {
 					@include display(flex);
 					@include flex-direction(row);
 				}
 				
-				&.reverse {
-					@media screen and (min-width: $xlarge-screen) {
-						@include flex-direction(row-reverse);
-						text-align: right;
-					}
+				article {
+					margin: 24px 0 0;
 					
-					.block-content {
-						@media screen and (min-width: $xlarge-screen) {
-							margin: 40px 24px 0 0;
-						}
-						
+					@media screen and (min-width: $xlarge-screen) {
+						width: 296px;
+						margin: 40px 0 0;
+						padding: 0 0 0 24px;
 					}
 					
 				}
 				
-				.knife-icon {
-					width: 72px;
-					height: auto;
-					position: relative;
-					z-index: 2;
-					top: 238px;
-					left: 208px;
-					@include filter(drop-shadow(0 2px 6px rgba($pepper,.25)));
+			}
+			
+		}
+		
+		&__info {
+			margin: 56px 0 0;
+			
+			@media screen and (min-width: $large-screen) {
+				width: 71.42857143%;
+				margin: 0 auto;
+				padding: 56px 0 0;
+			}
+			
+			@media screen and (min-width: $xlarge-screen) {
+				@include display(flex);
+				@include flex-direction(row-reverse);
+				padding: 104px 0 0;
+				
+				&:nth-child(even) {
+					@include flex-direction(row);
 					
-					@media screen and (min-width: $small-screen) {
-						top: 255px;
-						left: 250px;
+					article {
+						text-align: left;
+						padding: 0 0 0 24px;
 					}
 					
 				}
 				
-				.block-content {
-					margin: 32px 0 0;
-					
-					@media screen and (min-width: $large-screen) {
-						margin: 24px 0 0;
-					}
-					
-					@media screen and (min-width: $xlarge-screen) {
-						max-width: 296px;
-						margin: 40px 0 0 24px;
-					}
-					
+			}
+			
+			article {
+				margin: 24px 0 0;
+				
+				@media screen and (min-width: $xlarge-screen) {
+					text-align: right;
+					width: 296px;
+					margin: 40px 0 0;
+					padding: 0 24px 0 0;
 				}
 				
 			}

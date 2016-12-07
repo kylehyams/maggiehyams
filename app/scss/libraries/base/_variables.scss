@@ -3,6 +3,7 @@ $small-screen: 360px;
 $medium-screen: 600px;
 $large-screen: 1024px;
 $xlarge-screen: 1280px;
+$xxlarge-screen: 1440px;
 
 // Typography
 $base-font-family: $quattrocento;
@@ -52,5 +53,5 @@ $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 
 // Animations
-$base-duration: 150ms;
-$base-timing: ease;
+$base-duration: 250ms;
+$base-timing: cubic-bezier(0.39, 0.575, 0.565, 1);

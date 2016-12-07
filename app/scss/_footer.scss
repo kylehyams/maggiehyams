@@ -3,6 +3,7 @@ footer {
 	margin: 56px auto 0;
 	
 	@media screen and (min-width: $large-screen) {
+		width: 71.42857143%;
 		margin: 136px auto 80px;
 	}
 	
@@ -38,6 +39,10 @@ footer {
 						letter-spacing: 0.25px;
 					}
 					
+					@media screen and (min-width: $medium-screen) {
+						font-size: 1.8rem;
+					}
+					
 				}
 				
 				&-divider {
@@ -66,6 +71,11 @@ footer {
 							@media screen and (min-width: $small-screen) {
 								width: 23px;
 								top: 7px;
+							}
+							
+							@media screen and (min-width: $medium-screen) {
+								width: 24px;
+								top: 8px;
 							}
 							
 						}
@@ -130,6 +140,10 @@ footer {
 							
 							@media screen and (min-width: $small-screen) {
 								height: 23px;
+							}
+							
+							@media screen and (min-width: $medium-screen) {
+								height: 24px;
 							}
 							
 						}
