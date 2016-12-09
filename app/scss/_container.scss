@@ -4,11 +4,30 @@
 	
 	.inner-border {
 		width: 95vw;
-		height: 97vh;
+		height: 84vh;
 		border: solid 1px $fire;
-		@include position(fixed, 50% null null 50%);
+		@include position(absolute, 50% null null 50%);
 		@include transform(translate(-50%, -50%));
 		background: transparent;
+		
+		@media screen and (min-width: $small-screen) {
+			height: 86vh;
+		}
+		
+		@media screen and (min-width: $medium-screen) {
+			height: 94vh;
+			@include position(fixed, 50% null null 50%);
+		}
+		
+		@media screen and (min-width: $large-screen) {
+			width: 98vw;
+			height: 97.4vh;
+		}
+		
+		@media screen and (min-width: $xlarge-screen) {
+			height: 97.5vh;
+		}
+		
 	}
 	
 }

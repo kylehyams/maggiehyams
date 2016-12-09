@@ -1,14 +1,23 @@
 header {
 	@include span-columns(12);
-	height: 100vh;
+	height: 87vh;
 	background: $slate;
 	@include display(flex);
 	@include flex-direction(row);
 	@include justify-content(center);
 	@include align-items(flex-end);
 	
+	@media screen and (min-width: $small-screen) {
+		height: 90vh;
+	}
+	
+	@media screen and (min-width: $medium-screen) {
+		height: 98vh;
+	}
+	
 	@media screen and (min-width: $large-screen) {
 		@include span-columns(5);
+		height: 100vh;
 		@include display(flex);
 		@include align-items(center);
 		position: fixed;
@@ -17,18 +26,38 @@ header {
 	&:before {
 		content: "";
 		@include span-columns(12);
-		height: 100vh;
+		@include shift(0);
+		height: 87vh;
 		background: url(../images/hero_background-2x.jpg) 0 0 no-repeat;
 		background-size: cover;
 		position: absolute;
+		top: 0;
+		left: 0;
 		z-index: 1;
 		opacity: 0.15;
+		
+		@media screen and (min-width: $small-screen) {
+			height: 90vh;
+		}
+		
+		@media screen and (min-width: $medium-screen) {
+			height: 98vh;
+		}
+		
+		@media screen and (min-width: $large-screen) {
+			height: 100vh;
+		}
+		
 	}
 	
 	.header-container {
-		padding: 0 0 12vh;
+		padding: 0 0 14vh;
 		position: relative;
 		z-index: 2;
+		
+		@media screen and (min-width: $small-screen) {
+			padding: 0 0 15vh;
+		}
 		
 		@media screen and (min-width: $large-screen) {
 			padding: 0;
@@ -37,13 +66,15 @@ header {
 		.logo-primary {
 			width: 150px;
 			height: auto;
-			margin: 0 0 23vh;
+			margin: 0 0 14vh;
 			
 			@media screen and (min-width: $medium-screen) {
-				width: 200px;
+				width: 250px;
+				margin: 0 0 24vh;
 			}
 			
 			@media screen and (min-width: $large-screen) {
+				width: 200px;
 				margin: 0;
 			}
 			
