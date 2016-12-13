@@ -8,8 +8,8 @@
 		padding: 56px 0;
 		
 		@media screen and (min-width: $medium-screen) {
-			@include span-columns(8);
-			@include shift(2);
+			@include span-columns(12);
+			@include shift(0);
 		}
 		
 		@media screen and (min-width: $large-screen) {
@@ -20,14 +20,30 @@
 		
 		.wordmark {
 			
+			@media screen and (min-width: $medium-screen) {
+				width: percentage(5/7);
+				margin: 0 auto;
+			}
+			
+			@media screen and (min-width: $large-screen) {
+				width: percentage(7/7);
+				margin: 0;
+			}
+			
 			img {
 				width: 200px;
 				height: auto;
 				
 				@media screen and (min-width: $large-screen) {
+					width: 150px;
 					position: absolute;
-					top: 40px;
-					right: 64px;
+					top: 32px;
+					right: 40px;
+				}
+				
+				@media screen and (min-width: $large-screen) and (min-height: 769px) {
+					width: 200px;
+					top: 48px;
 				}
 				
 				@media screen and (min-width: $xlarge-screen) {
@@ -41,13 +57,21 @@
 		&__intro {
 			margin: 48px 0 0;
 			
+			@media screen and (min-width: $medium-screen) {
+				width: percentage(5/7);
+				margin: 48px auto 0;
+			}
+			
 			@media screen and (min-width: $large-screen) {
-				width: 71.42857143%;
-				height: 100vh;
+				height: 93vh;
 				@include display(flex);
 				@include flex-direction(column);
 				@include justify-content(flex-end);
-				margin: 0 auto;
+				padding: 0 0 7vh;
+			}
+			
+			@media screen and (min-width: $xlarge-screen) {
+				height: 95.75vh;
 				padding: 0 0 5.25vh;
 			}
 			
@@ -55,8 +79,16 @@
 				width: 100%;
 				position: relative;
 				
-				@media screen and (min-width: $xlarge-screen) {
+				@media screen and (min-width: $medium-screen) {
 					@include display(flex);
+					@include flex-direction(row);
+				}
+				
+				@media screen and (min-width: $large-screen) {
+					@include flex-direction(column);
+				}
+				
+				@media screen and (min-width: $xlarge-screen) {
 					@include flex-direction(row);
 				}
 				
@@ -75,7 +107,8 @@
 					}
 					
 					@media screen and (min-width: $medium-screen) {
-						left: 70%;
+						top: 24px;
+						left: 45%;
 					}
 					
 					@media screen and (min-width: $large-screen) {
@@ -96,6 +129,18 @@
 				article {
 					margin: 24px 0 0;
 					
+					@media screen and (min-width: $medium-screen) {
+						width: 296px;
+						margin: 40px 0 0;
+						padding: 0 0 0 24px;
+					}
+					
+					@media screen and (min-width: $large-screen) {
+						width: inherit;
+						margin: 24px 0 0;
+						padding: 0;
+					}
+					
 					@media screen and (min-width: $xlarge-screen) {
 						width: 296px;
 						margin: 40px 0 0;
@@ -111,14 +156,42 @@
 		&__info {
 			margin: 56px 0 0;
 			
+			@media screen and (min-width: $medium-screen) {
+				width: percentage(5/7);
+				@include display(flex);
+				@include flex-direction(row-reverse);
+				margin: 56px auto 0;
+				
+				&:nth-child(even) {
+					@include flex-direction(row);
+					
+					article {
+						text-align: left;
+						padding: 0 0 0 24px;
+					}
+					
+				}
+				
+			}
+			
 			@media screen and (min-width: $large-screen) {
-				width: 71.42857143%;
+				@include flex-direction(column);
 				margin: 0 auto;
 				padding: 56px 0 0;
+				
+				&:nth-child(even) {
+					@include flex-direction(column);
+					
+					
+					article {
+						padding: 0;
+					}
+					
+				}
+				
 			}
 			
 			@media screen and (min-width: $xlarge-screen) {
-				@include display(flex);
 				@include flex-direction(row-reverse);
 				padding: 104px 0 0;
 				
@@ -136,6 +209,20 @@
 			
 			article {
 				margin: 24px 0 0;
+				
+				@media screen and (min-width: $medium-screen) {
+					text-align: right;
+					width: 296px;
+					margin: 40px 0 0;
+					padding: 0 24px 0 0;
+				}
+				
+				@media screen and (min-width: $large-screen) {
+					width: 100%;
+					text-align: left;
+					margin: 24px 0 0;
+					padding: 0;
+				}
 				
 				@media screen and (min-width: $xlarge-screen) {
 					text-align: right;

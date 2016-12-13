@@ -2,8 +2,11 @@ footer {
 	text-align: center;
 	margin: 56px auto 0;
 	
+	@media screen and (min-width: $medium-screen) {
+		width: percentage(5/7);
+	}
+	
 	@media screen and (min-width: $large-screen) {
-		width: 71.42857143%;
 		margin: 136px auto 80px;
 	}
 	

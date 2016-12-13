@@ -26,6 +26,14 @@
 		box-shadow: 0 3px 60px 0 rgba($pepper, 0.5);
 		z-index: 0;
 		
+		@media screen and (min-width: $medium-screen) {
+			bottom: 14px;
+		}
+		
+		@media screen and (min-width: $large-screen) {
+			bottom: 0;
+		}
+		
 		@media screen and (min-width: $xlarge-screen) {
 			bottom: 22px;
 		}

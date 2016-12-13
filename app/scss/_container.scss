@@ -15,16 +15,23 @@
 		}
 		
 		@media screen and (min-width: $medium-screen) {
-			height: 94vh;
+			width: 96vw;
+			height: 95vh;
 			@include position(fixed, 50% null null 50%);
 		}
 		
 		@media screen and (min-width: $large-screen) {
-			width: 98vw;
-			height: 97.4vh;
+			width: 97vw;
+			height: 94vh;
+		}
+		
+		@media screen and (min-width: $large-screen) and (min-height: 769px) {
+			width: 97.5vw;
+			height: 97vh;
 		}
 		
 		@media screen and (min-width: $xlarge-screen) {
+			width: 98vw;
 			height: 97.5vh;
 		}
 		
