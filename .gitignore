@@ -2,7 +2,7 @@ node_modules
 package.json
 dist
 app/.DS_Store
-app/scss/.DS_Store
 app/css/.DS_Store
-app/js/.DS_Store
 app/images/.DS_Store
+app/js/.DS_Store
+app/scss/.DS_Store
