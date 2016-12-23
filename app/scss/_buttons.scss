@@ -12,7 +12,7 @@
 	}
 
 	&__button {
-		font-family: $heading-font-family;
+		font-family: $bagnard-sans-fallback;
 		font-size: 1.8rem;
 		font-weight: 400;
 		line-height: 60px;
@@ -22,8 +22,11 @@
 		width: 248px;
 		border: solid 3px $fire;
 		display: inline-block;
-// 		@include transition(all 250ms cubic-bezier(0.39, 0.575, 0.565, 1));
 		transition: $base-duration $base-timing;
+		
+		.wf-active & {
+			font-family: $heading-font-family;
+		}
 		
 		&:hover {
 			background: $action-color;

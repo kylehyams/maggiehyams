@@ -53,15 +53,18 @@ $verdana: "Verdana", "Geneva", sans-serif;
 /// @type List
 
 $bagnard-sans: "BagnardSansRegular", "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
+$bagnard-sans-fallback: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
 
 /// Quattrocento Sans font stack.
 ///
 /// @type List
 
 $quattrocento: "Quattrocento Sans", "Verdana", "Geneva", sans-serif;
+$quattrocento-fallback: "Verdana", "Geneva", sans-serif;
 
 /// Oswald font stack.
 ///
 /// @type List
 
 $oswald: "Oswald", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+$oswald-fallback: "Impact", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;

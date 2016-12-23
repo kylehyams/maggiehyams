@@ -30,8 +30,8 @@ footer {
 				margin: 0 0 16px;
 				
 				&-link {
-					font-family: $heading-font-family;
-					font-size: 1.5rem;
+					font-family: $bagnard-sans-fallback;
+					font-size: 1.3rem;
 					letter-spacing: 0;
 					line-height: 8px;
 					font-weight: 400;
@@ -44,6 +44,11 @@ footer {
 					
 					@media screen and (min-width: $medium-screen) {
 						font-size: 1.8rem;
+					}
+					
+					.wf-active & {
+						font-family: $heading-font-family;
+						font-size: 1.5rem;
 					}
 					
 				}
@@ -105,8 +110,8 @@ footer {
 				margin: 0;
 				
 				&-link {
-					font-family: $heading-font-family;
-					font-size: 1.5rem;
+					font-family: $bagnard-sans-fallback;
+					font-size: 1.3rem;
 					letter-spacing: 0;
 					line-height: 8px;
 					font-weight: 400;
@@ -115,6 +120,11 @@ footer {
 					@media screen and (min-width: $small-screen) {
 						font-size: 1.6rem;
 						letter-spacing: 0.25px;
+					}
+					
+					.wf-active & {
+						font-family: $heading-font-family;
+						font-size: 1.5rem;
 					}
 					
 				}

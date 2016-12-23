@@ -268,6 +268,20 @@
         <!-- build:js js/main.min.js -->
         <script src="js/main.js"></script>
         <!-- endbuild -->
+        
+        <!-- Google Web Font Loader -->
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script>
+			WebFont.load({
+				google: {
+					families: ['Oswald', 'Quattrocento Sans']
+				},
+				custom: {
+					families: ['BagnardSansRegular:n4'],
+					urls: ['css/main.css']
+				}
+			});
+		</script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
