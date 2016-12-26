@@ -3,28 +3,32 @@ html {
 }
 
 body {
-  color: $base-font-color;
-  font-family: $quattrocento-fallback;
-//   font-size: $base-font-size;
-  font-size: 1.4rem;
-//   line-height: $base-line-height;
-  letter-spacing: 0.25px;
-  line-height: 24px;
-  font-weight: 400;
-  text-align: left;
-  -webkit-font-smoothing: antialiased;
+	color: $base-font-color;
+	font-family: $quattrocento-fallback;
+	font-size: 1.4rem;
+	letter-spacing: 0.5px;
+	line-height: 22px;
+	font-weight: 400;
+	text-align: left;
+	-webkit-font-smoothing: antialiased;
   
-  .wf-active & {
-    font-family: $base-font-family;
-    font-size: 1.6rem;
-    line-height: 24px;
-    
-    @media screen and (min-width: $large-screen) {
-		font-size: 1.4rem;
+	@media screen and (min-width: $large-screen) {
+		font-size: 1.2rem;
 		line-height: 22px;
 	}
-    
-  }
+  
+	.wf-active & {
+		font-family: $base-font-family;
+		font-size: 1.6rem;
+		letter-spacing: 0.25px;
+		line-height: 24px;
+	
+		@media screen and (min-width: $large-screen) {
+			font-size: 1.4rem;
+			line-height: 22px;
+		}
+	
+	}
   
 }
 
@@ -34,25 +38,34 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $bagnard-sans-fallback;
-  font-weight: 400;
-//   font-size: modular-scale(1);
-//   line-height: $heading-line-height;
-//   margin: 0 0 $small-spacing;
-  
-  .wf-active & {
-	  font-family: $heading-font-family;
-  }
+	font-family: $bagnard-sans-fallback;
+	font-weight: 400;
+	letter-spacing: 0.25px;
+	
+	.wf-active & {
+		font-family: $heading-font-family;
+		letter-spacing: normal;
+	}
   
 }
 
 h1 {
-	font-size: 2.8rem;
+	font-size: 2.7rem;
 	line-height: 34px;
 	
 	@media screen and (min-width: $large-screen) {
 		font-size: 2.6rem;
 		line-height: 32px;
+	}
+	
+	.wf-active & {
+		font-size: 2.8rem;
+		line-height: 34px;
+		
+		@media screen and (min-width: $large-screen) {
+			font-size: 2.6rem;
+			line-height: 32px;
+		}
 	}
 	
 }
@@ -82,31 +95,19 @@ h3 {
 }
 
 p {
-// 	margin: 0 0 $small-spacing;
-// 	font-size: 1.6rem;
-// 	letter-spacing: 0.25px;
-// 	line-height: 24px;
 	margin: 16px 0 0;
-	
-/*
-	@media screen and (min-width: $large-screen) {
-		font-size: 1.4rem;
-		line-height: 22px;
 	}
-*/
-	
-}
 
 a {
-  color: $action-color;
-  text-decoration: none;
-  transition: color $base-duration $base-timing;
-
-  &:active,
-  &:focus,
-  &:hover {
-    color: darken($action-color, 20%);
-  }
+	color: $action-color;
+	text-decoration: none;
+	transition: color $base-duration $base-timing;
+	
+	&:active,
+	&:focus,
+	&:hover {
+		color: darken($action-color, 20%);
+	}
 }
 
 ul {
@@ -117,18 +118,8 @@ ul {
 	}
 	
 	li {
-// 		font-size: 1.6rem;
-// 		letter-spacing: 0.25px;
-// 		line-height: 24px;
 		margin: 0;
 		padding: 0;
-		
-/*
-		@media screen and (min-width: $large-screen) {
-			font-size: 1.4rem;
-			line-height: 22px;
-		}
-*/
 		
 		&.label {
 			color: $fire;

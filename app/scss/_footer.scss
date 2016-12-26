@@ -31,20 +31,11 @@ footer {
 				
 				&-link {
 					font-family: $bagnard-sans-fallback;
-					font-size: 1.3rem;
+					font-size: 1.4rem;
 					letter-spacing: 0;
 					line-height: 8px;
 					font-weight: 400;
 					margin: 0 8px 0 0;
-					
-					@media screen and (min-width: $small-screen) {
-						font-size: 1.6rem;
-						letter-spacing: 0.25px;
-					}
-					
-					@media screen and (min-width: $medium-screen) {
-						font-size: 1.8rem;
-					}
 					
 					.wf-active & {
 						font-family: $heading-font-family;
@@ -111,17 +102,12 @@ footer {
 				
 				&-link {
 					font-family: $bagnard-sans-fallback;
-					font-size: 1.3rem;
+					font-size: 1.4rem;
 					letter-spacing: 0;
 					line-height: 8px;
 					font-weight: 400;
 					margin: 0 8px 0 0;
-					
-					@media screen and (min-width: $small-screen) {
-						font-size: 1.6rem;
-						letter-spacing: 0.25px;
-					}
-					
+										
 					.wf-active & {
 						font-family: $heading-font-family;
 						font-size: 1.5rem;
