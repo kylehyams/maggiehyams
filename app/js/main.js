@@ -1,3 +1,8 @@
+// Add animation class to body on load
+$(function() {
+	$('body').addClass('animate');
+});
+
 // Scroll on page
 (function (jQuery) {
 	jQuery.mark = {

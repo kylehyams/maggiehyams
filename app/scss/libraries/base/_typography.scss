@@ -12,8 +12,11 @@ body {
 	text-align: left;
 	-webkit-font-smoothing: antialiased;
   
+	// Removed fallback styling on larger screens so that intro animations don't look janky
 	@media screen and (min-width: $large-screen) {
-		font-size: 1.2rem;
+		font-family: $base-font-family;
+		font-size: 1.4rem;
+		letter-spacing: 0.25px;
 		line-height: 22px;
 	}
   

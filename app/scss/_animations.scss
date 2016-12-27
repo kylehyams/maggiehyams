@@ -1,5 +1,122 @@
-//Animations
+// On load animations
+header:before {
+	content: "";
+	opacity: 0;
+	transition: all 500ms $base-timing;
+	
+	.animate & {
+		opacity: 0.15;
+	}
+	
+}
 
+.logo-primary {
+	transform: translateY(-50px);
+	transition: all 1000ms $base-timing;
+	
+	.border {
+		opacity: 0;
+		transition: all 750ms $base-timing;
+	}
+	
+	.m {
+		opacity: 0;
+		transform: translateY(-20px);
+		transition: all 750ms $base-timing;
+		transition-delay: 250ms;
+	}
+	
+	.h {
+		opacity: 0;
+		transform: translateY(-20px);
+		transition: all 750ms $base-timing;
+		transition-delay: 500ms;
+	}
+	
+	.knife {
+		opacity: 0;
+		transform: translateY(-20px);
+		transition: all 750ms $base-timing;
+		transition-delay: 750ms;
+	}
+	
+	.animate & {
+		transform: translateY(0);
+		
+		.border,
+		.m,
+		.h,
+		.knife {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		
+	}
+	
+}
+
+.scroll-indicator-mobile {
+	opacity: 0;
+	transform: translateY(-25px);
+	transition: all 750ms $base-timing;
+	transition-delay: 500ms;
+	
+	.animate & {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	
+}
+
+.wordmark {
+	
+	@media screen and (min-width: $large-screen) {
+		opacity: 0;
+		transition: all 750ms $base-timing;
+		transition-delay: 750ms;
+		
+		.animate & {
+			opacity: 1;
+		}
+		
+	}
+}
+
+.content__intro-block {
+	
+	@media screen and (min-width: $large-screen) {
+		opacity: 0;
+		transform: translateY(-25px);
+		transition: all 1000ms $base-timing;
+		transition-delay: 1000ms;
+		
+		.animate & {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		
+	}
+}
+
+.scroll-indicator-desktop {
+	
+	@media screen and (min-width: $large-screen) {
+		opacity: 0;
+		transform: translateY(-25px);
+		transition: all 750ms $base-timing;
+		transition-delay: 1500ms;
+		
+		.animate & {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		
+	}
+	
+}
+
+
+// Scroll indicator
 .levitate {
   -webkit-animation-duration: 1500ms;
   animation-duration: 1500ms;
