@@ -68,6 +68,7 @@ header:before {
 	
 }
 
+/*
 .wordmark {
 	
 	@media screen and (min-width: $large-screen) {
@@ -81,6 +82,7 @@ header:before {
 		
 	}
 }
+*/
 
 .content__intro-block {
 	
@@ -168,4 +170,15 @@ header:before {
   animation-name: bounce;
   -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
+}
+
+
+// Fade in
+.js-fade-element-hide {
+	opacity: 0;
+}
+
+.js-fade-element-show {
+	opacity: 1;
+	transition: all 750ms $base-timing;
 }
