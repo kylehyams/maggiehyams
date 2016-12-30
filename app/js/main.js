@@ -1,10 +1,4 @@
-// Add class to the body once the page is loaded, to animate-in select objects
-/*
-$(function() {
-	$('body').addClass('animate');
-});
-*/
-
+// If Javascript is detected, then add a class to animate intro elements
 $(document).ready(function() {
 	var element = document.getElementsByClassName("js");
 	$(element).addClass('cooked');

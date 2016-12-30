@@ -33,7 +33,7 @@ gulp.task('sass', function() {
 	return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children directories
 		.pipe(sourcemaps.init())
 		.pipe(sass({
-			outputStyle: 'compressed'
+			outputStyle: 'nested'
 		}))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('app/css'))
@@ -46,10 +46,10 @@ gulp.task('sass', function() {
 gulp.task('useref', function() {
 	return gulp.src('app/*html')
 		.pipe(useref())
-		// Minifies only if it's a JavaScript file
-		.pipe(gulpIf('*.js', uglify()))
 		// Minifies only if it's a CSS file
 		.pipe(gulpIf('*.css', cssnano()))
+		// Minifies only if it's a JavaScript file
+		.pipe(gulpIf('*.js', uglify()))
 		.pipe(gulp.dest('dist'))
 });
 
