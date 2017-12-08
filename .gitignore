@@ -1,6 +1,7 @@
 node_modules
 package.json
 dist
+.DS_Store
 app/.DS_Store
 app/css/.DS_Store
 app/images/.DS_Store
