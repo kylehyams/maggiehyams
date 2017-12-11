@@ -131,7 +131,7 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
     input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover {
       border: 1px solid #dd5655; }
   input[type="color"]::placeholder, input[type="date"]::placeholder, input[type="datetime"]::placeholder, input[type="datetime-local"]::placeholder, input[type="email"]::placeholder, input[type="month"]::placeholder, input[type="number"]::placeholder, input[type="password"]::placeholder, input[type="search"]::placeholder, input[type="tel"]::placeholder, input[type="text"]::placeholder, input[type="time"]::placeholder, input[type="url"]::placeholder, input[type="week"]::placeholder, input:not([type])::placeholder, textarea::placeholder {
-    color: #979797; }
+    color: #838383; }
 
 textarea {
   resize: vertical; }
@@ -210,7 +210,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  color: #525252;
+  color: #303030;
   font-family: "Verdana", "Geneva", sans-serif;
   font-size: 1.4rem;
   letter-spacing: 0.5px;
@@ -221,18 +221,14 @@ body {
   @media screen and (min-width: 1024px) {
     body {
       font-family: "Quattrocento Sans", "Verdana", "Geneva", sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       letter-spacing: 0.25px;
-      line-height: 22px; } }
+      line-height: 24px; } }
   .wf-active body {
     font-family: "Quattrocento Sans", "Verdana", "Geneva", sans-serif;
     font-size: 1.6rem;
     letter-spacing: 0.25px;
     line-height: 24px; }
-    @media screen and (min-width: 1024px) {
-      .wf-active body {
-        font-size: 1.4rem;
-        line-height: 22px; } }
 
 h1,
 h2,
@@ -241,8 +237,7 @@ h4,
 h5,
 h6 {
   font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.25px; }
+  font-weight: 400; }
   .wf-active h1, .wf-active
   h2, .wf-active
   h3, .wf-active
@@ -255,35 +250,19 @@ h6 {
 h1 {
   font-size: 2.7rem;
   line-height: 34px; }
-  @media screen and (min-width: 1024px) {
-    h1 {
-      font-size: 2.6rem;
-      line-height: 32px; } }
   .wf-active h1 {
     font-size: 2.8rem;
-    line-height: 34px; }
-    @media screen and (min-width: 1024px) {
-      .wf-active h1 {
-        font-size: 2.6rem;
-        line-height: 32px; } }
+    line-height: 32px; }
 
 h2 {
-  font-size: 2.6rem;
-  line-height: 32px; }
-  @media screen and (min-width: 1024px) {
-    h2 {
-      font-size: 2.4rem;
-      line-height: 30px; } }
+  font-size: 2.4rem;
+  line-height: 28px; }
 
 h3 {
-  font-size: 1.8rem;
-  letter-spacing: 1;
-  line-height: 22px;
+  font-size: 1.6rem;
+  letter-spacing: 0.25;
+  line-height: 20px;
   margin: 4px 0; }
-  @media screen and (min-width: 1024px) {
-    h3 {
-      font-size: 1.6rem;
-      line-height: 22px; } }
 
 p {
   margin: 16px 0 0; }
@@ -308,12 +287,13 @@ ul {
       font-family: "Impact", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
       font-size: 1.3rem;
       font-weight: 400;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       line-height: 12px;
       text-transform: uppercase; }
       .wf-active ul li.label {
         font-family: "Oswald", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-        font-size: 1.2rem; }
+        font-size: 1.2rem;
+        letter-spacing: 1.5px; }
 
 hr {
   border-bottom: 1px solid #dd5655;
@@ -332,7 +312,7 @@ html {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: #fff; }
+  background: #fcfcfc; }
   .main-container::after {
     clear: both;
     content: "";
@@ -801,8 +781,8 @@ header {
       .content__intro-block .icon-knife {
         width: 72px;
         height: auto;
-        -webkit-filter: drop-shadow(0 2px 6px rgba(23, 23, 23, 0.25));
-        filter: drop-shadow(0 2px 6px rgba(23, 23, 23, 0.25));
+        -webkit-filter: drop-shadow(0 2px 6px rgba(48, 48, 48, 0.25));
+        filter: drop-shadow(0 2px 6px rgba(48, 48, 48, 0.25));
         position: absolute;
         z-index: 2;
         top: 217px;
@@ -981,7 +961,7 @@ header {
       font-family: "BagnardSansRegular", "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif; }
     .cta__button:hover {
       background: #dd5655;
-      color: #fff; }
+      color: #fcfcfc; }
 
 footer {
   text-align: center;
@@ -1173,12 +1153,12 @@ footer {
     content: "";
     width: 90%;
     height: 50%;
-    background: #171717;
+    background: #303030;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    box-shadow: 0 3px 60px 0 rgba(23, 23, 23, 0.5);
+    box-shadow: 0 3px 60px 0 rgba(48, 48, 48, 0.5);
     z-index: 0; }
     @media screen and (min-width: 600px) {
       .image-shadow:after {
@@ -1210,30 +1190,5 @@ footer {
     .scroll-indicator-mobile {
       display: none;
       padding: 0; } }
-
-.scroll-indicator-desktop {
-  border: solid 1px #dd5655;
-  width: 40px;
-  height: 56px;
-  margin: 0 auto;
-  padding: 15px 11px 0;
-  display: none; }
-  @media screen and (min-width: 1024px) {
-    .scroll-indicator-desktop {
-      width: 32px;
-      height: 48px;
-      padding: 15px 9px 0;
-      display: block;
-      margin: 24px auto 0; } }
-  @media screen and (min-width: 1280px) {
-    .scroll-indicator-desktop {
-      margin: 19.6vh auto 0; } }
-  .scroll-indicator-desktop .arrow {
-    width: 16px;
-    height: auto;
-    margin: 0 auto; }
-    @media screen and (min-width: 1024px) {
-      .scroll-indicator-desktop .arrow {
-        width: 12px; } }
 
 /*# sourceMappingURL=main.css.map */

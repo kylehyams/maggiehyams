@@ -15,9 +15,9 @@ body {
 	// Removed fallback styling on larger screens so that intro animations don't look janky
 	@media screen and (min-width: $large-screen) {
 		font-family: $base-font-family;
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 		letter-spacing: 0.25px;
-		line-height: 22px;
+		line-height: 24px;
 	}
   
 	.wf-active & {
@@ -25,11 +25,6 @@ body {
 		font-size: 1.6rem;
 		letter-spacing: 0.25px;
 		line-height: 24px;
-	
-		@media screen and (min-width: $large-screen) {
-			font-size: 1.4rem;
-			line-height: 22px;
-		}
 	
 	}
   
@@ -43,7 +38,6 @@ h5,
 h6 {
 	font-family: $bagnard-sans-fallback;
 	font-weight: 400;
-	letter-spacing: 0.25px;
 	
 	.wf-active & {
 		font-family: $heading-font-family;
@@ -56,50 +50,28 @@ h1 {
 	font-size: 2.7rem;
 	line-height: 34px;
 	
-	@media screen and (min-width: $large-screen) {
-		font-size: 2.6rem;
-		line-height: 32px;
-	}
-	
 	.wf-active & {
 		font-size: 2.8rem;
-		line-height: 34px;
-		
-		@media screen and (min-width: $large-screen) {
-			font-size: 2.6rem;
-			line-height: 32px;
-		}
+		line-height: 32px;
 	}
 	
 }
 
 h2 {
-	font-size: 2.6rem;
-	line-height: 32px;
-	
-	@media screen and (min-width: $large-screen) {
-		font-size: 2.4rem;
-		line-height: 30px;
-	}
-	
+	font-size: 2.4rem;
+	line-height: 28px;
 }
 
 h3 {
-	font-size: 1.8rem;
-	letter-spacing: 1;
-	line-height: 22px;
+	font-size: 1.6rem;
+	letter-spacing: 0.25;
+	line-height: 20px;
 	margin: 4px 0;
-	
-	@media screen and (min-width: $large-screen) {
-		font-size: 1.6rem;
-		line-height: 22px;
-	}
-	
 }
 
 p {
 	margin: 16px 0 0;
-	}
+}
 
 a {
 	color: $action-color;
@@ -129,13 +101,14 @@ ul {
 			font-family: $oswald-fallback;
 			font-size: 1.3rem;
 			font-weight: 400;
-			letter-spacing: 1.5px;
+			letter-spacing: 2px;
 			line-height: 12px;
 			text-transform: uppercase;
 			
 			.wf-active & {
 				font-family: $condensed-font-family;
 				font-size: 1.2rem;
+				letter-spacing: 1.5px;
 			}
 			
 		}
