@@ -318,32 +318,29 @@ html {
     content: "";
     display: block; }
   .main-container .inner-border {
-    width: 95vw;
-    height: 84vh;
-    border: solid 1px #dd5655;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background: transparent; }
-    @media screen and (min-width: 360px) {
-      .main-container .inner-border {
-        height: 86vh; } }
+    display: none; }
     @media screen and (min-width: 600px) {
       .main-container .inner-border {
+        display: inherit;
         width: 96vw;
         height: 95vh;
-        position: fixed;
+        border: solid 1px #dd5655;
+        position: absolute;
         top: 50%;
-        left: 50%; } }
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background: transparent; } }
     @media screen and (min-width: 1024px) {
       .main-container .inner-border {
         width: 97vw;
-        height: 94vh; } }
+        height: 94vh;
+        position: fixed;
+        top: 50%;
+        left: 50%; } }
     @media screen and (min-width: 1024px) and (min-height: 769px) {
       .main-container .inner-border {
         width: 97.5vw;
@@ -778,34 +775,15 @@ header {
           -moz-flex-direction: row;
           flex-direction: row;
           -ms-flex-direction: row; } }
-      .content__intro-block .icon-knife {
-        width: 72px;
+      .content__intro-block aside {
+        max-width: 280px;
         height: auto;
-        -webkit-filter: drop-shadow(0 2px 6px rgba(48, 48, 48, 0.25));
-        filter: drop-shadow(0 2px 6px rgba(48, 48, 48, 0.25));
-        position: absolute;
-        z-index: 2;
-        top: 217px;
-        left: 77%; }
-        @media screen and (min-width: 360px) {
-          .content__intro-block .icon-knife {
-            top: 233px;
-            left: 80%; } }
+        margin: 0 auto; }
         @media screen and (min-width: 600px) {
-          .content__intro-block .icon-knife {
-            top: 24px;
-            left: 45%; } }
-        @media screen and (min-width: 1024px) {
-          .content__intro-block .icon-knife {
-            top: 233px;
-            left: 53%; } }
-        @media screen and (min-width: 1280px) {
-          .content__intro-block .icon-knife {
-            top: 24px;
-            left: 45%; } }
-        @media screen and (min-width: 1440px) {
-          .content__intro-block .icon-knife {
-            left: 43%; } }
+          .content__intro-block aside {
+            margin: 0; } }
+        .content__intro-block aside img {
+          box-shadow: 0px 8px 40px rgba(48, 48, 48, 0.24); }
       .content__intro-block article {
         margin: 24px 0 0; }
         @media screen and (min-width: 600px) {
@@ -914,6 +892,15 @@ header {
           .content__info:nth-child(even) article {
             text-align: left;
             padding: 0 0 0 24px; } }
+    .content__info aside {
+      max-width: 280px;
+      height: auto;
+      margin: 0 auto; }
+      @media screen and (min-width: 600px) {
+        .content__info aside {
+          margin: 0; } }
+      .content__info aside img {
+        box-shadow: 0px 8px 40px rgba(48, 48, 48, 0.24); }
     .content__info article {
       margin: 24px 0 0; }
       @media screen and (min-width: 600px) {

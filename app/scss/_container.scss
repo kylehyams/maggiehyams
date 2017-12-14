@@ -3,26 +3,22 @@
 	background: $salt;
 	
 	.inner-border {
-		width: 95vw;
-		height: 84vh;
-		border: solid 1px $fire;
-		@include position(absolute, 50% null null 50%);
-		@include transform(translate(-50%, -50%));
-		background: transparent;
-		
-		@media screen and (min-width: $small-screen) {
-			height: 86vh;
-		}
+		display: none;
 		
 		@media screen and (min-width: $medium-screen) {
+			display: inherit;
 			width: 96vw;
 			height: 95vh;
-			@include position(fixed, 50% null null 50%);
+			border: solid 1px $fire;
+			@include position(absolute, 50% null null 50%);
+			@include transform(translate(-50%, -50%));
+			background: transparent;
 		}
 		
 		@media screen and (min-width: $large-screen) {
 			width: 97vw;
 			height: 94vh;
+			@include position(fixed, 50% null null 50%);
 		}
 		
 		@media screen and (min-width: $large-screen) and (min-height: 769px) {
