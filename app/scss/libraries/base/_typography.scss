@@ -66,7 +66,24 @@ h3 {
 	font-size: 1.6rem;
 	letter-spacing: 0.25;
 	line-height: 20px;
-	margin: 4px 0;
+	margin: 8px 0 0;
+}
+
+h4 {
+	color: $fire;
+	font-family: $oswald-fallback;
+	font-size: 1.3rem;
+	font-weight: 400;
+	letter-spacing: 2px;
+	line-height: 12px;
+	text-transform: uppercase;
+	
+	.wf-active & {
+		font-family: $condensed-font-family;
+		font-size: 1.2rem;
+		letter-spacing: 1.5px;
+	}
+	
 }
 
 p {
@@ -86,33 +103,114 @@ a {
 }
 
 ul {
-	margin: 16px 0 0;
 	
-	@media screen and (min-width: $large-screen) {
-		margin: 24px 0 0;
-	}
+	margin: 0;
+	padding: 0;
 	
 	li {
 		margin: 0;
 		padding: 0;
+	}
+	
+	&.list {
+		margin: 8px 0 0;
+		padding: 0 0 0 8px;
 		
-		&.label {
-			color: $fire;
-			font-family: $oswald-fallback;
-			font-size: 1.3rem;
-			font-weight: 400;
-			letter-spacing: 2px;
-			line-height: 12px;
-			text-transform: uppercase;
+		@media screen and (min-width: $large-screen) {
+			margin: 24px 0 0;
+		}
+		
+		li {
+			margin: 4px 0 0;
+			padding: 0 0 0 20px;
+			position: relative;
 			
-			.wf-active & {
-				font-family: $condensed-font-family;
-				font-size: 1.2rem;
-				letter-spacing: 1.5px;
+			&:first-child {margin: 0;}
+			
+			// Bullet for each list item
+			&:before {
+				content: "";
+				width: 12px;
+				height: 3px;
+				background: url(../../../images/maggie_hyams_blade.svg) 0 0 no-repeat;
+				background-size: cover;
+				position: absolute;
+				top: 10px;
+				left: 0;
 			}
 			
 		}
 		
+		
+		// Repositioning the list images as the text alignments shift
+		.content__info & {
+				
+			@media screen and (min-width: $medium-screen) {
+				padding: 0 8px 0 0;
+					
+				li {
+					padding: 0 20px 0 0;
+					
+					&:before {
+						left: auto;
+						right: 0;
+						@include transform(scaleX(-1));
+					}
+					
+				}
+				
+				&:nth-child(even) {
+					padding: 0 0 0 8px;
+					
+						li {
+							padding: 0 0 0 20px;
+							
+							&:before {
+								left: 0;
+								right: auto;
+								@include transform(scaleX(1));
+							}
+						
+						}
+						
+				}
+					
+			}
+			
+			@media screen and (min-width: $large-screen) {
+				padding: 0 0 0 8px;
+					
+				li {
+					padding: 0 0 0 20px;
+					
+					&:before {
+						left: 0;
+						right: auto;
+						@include transform(scaleX(1));	
+					}
+					
+				}
+				
+			}
+			
+			@media screen and (min-width: $xlarge-screen) {
+				padding: 0 8px 0 0;
+					
+				li {
+					padding: 0 20px 0 0;
+					
+					&:before {
+						left: auto;
+						right: 0;
+						@include transform(scaleX(-1));
+					}
+					
+				}
+				
+			}
+			
+		}
+	
 	}
 	
 }

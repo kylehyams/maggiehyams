@@ -203,7 +203,7 @@
 			}
 			
 			article {
-				margin: 24px 0 0;
+				margin: 32px 0 0;
 				
 				@media screen and (min-width: $medium-screen) {
 					text-align: right;
@@ -224,6 +224,11 @@
 					width: 296px;
 					margin: 40px 0 0;
 					padding: 0 24px 0 0;
+					
+				}
+				
+				.info-group {
+					margin: 24px 0 0;
 				}
 				
 			}
