@@ -383,19 +383,22 @@ html {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: #fcfcfc; }
+  background: #fcfcfc;
+  height: 100%;
+  position: relative; }
   .main-container::after {
     clear: both;
     content: "";
     display: block; }
-  .main-container .inner-border {
+  .main-container:before {
+    content: "";
+    border: solid 1px #dd5655;
     display: none; }
     @media screen and (min-width: 600px) {
-      .main-container .inner-border {
-        display: inherit;
+      .main-container:before {
         width: 96vw;
-        height: 95vh;
-        border: solid 1px #dd5655;
+        height: 94vh;
+        display: inherit;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -404,22 +407,20 @@ html {
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
-        background: transparent; } }
+        z-index: 3; } }
     @media screen and (min-width: 1024px) {
-      .main-container .inner-border {
-        width: 97vw;
-        height: 94vh;
+      .main-container:before {
+        width: 98vw;
         position: fixed;
         top: 50%;
         left: 50%; } }
     @media screen and (min-width: 1024px) and (min-height: 769px) {
-      .main-container .inner-border {
-        width: 97.5vw;
-        height: 97vh; } }
+      .main-container:before {
+        height: 98vh; } }
     @media screen and (min-width: 1280px) {
-      .main-container .inner-border {
-        width: 98vw;
-        height: 97.5vh; } }
+      .main-container:before {
+        width: 97vw;
+        height: 97vh; } }
 
 header:before {
   content: "";
@@ -631,7 +632,7 @@ header {
       height: 90vh; } }
   @media screen and (min-width: 600px) {
     header {
-      height: 98vh; } }
+      height: 100vh; } }
   @media screen and (min-width: 1024px) {
     header {
       float: left;
@@ -678,9 +679,6 @@ header {
       header:before {
         height: 90vh; } }
     @media screen and (min-width: 600px) {
-      header:before {
-        height: 98vh; } }
-    @media screen and (min-width: 1024px) {
       header:before {
         height: 100vh; } }
   header .header-container {
@@ -1195,46 +1193,6 @@ footer {
     @media screen and (min-width: 1024px) {
       footer .footer-icon {
         margin: 212px 0 0; } }
-
-.image-shadow {
-  width: 260px;
-  height: 260px;
-  margin: 0 auto;
-  overflow: visible;
-  position: relative; }
-  @media screen and (min-width: 360px) {
-    .image-shadow {
-      width: 280px;
-      height: 280px; } }
-  @media screen and (min-width: 1024px) {
-    .image-shadow {
-      margin: 0; } }
-  .image-shadow:after {
-    content: "";
-    width: 90%;
-    height: 50%;
-    background: #303030;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    box-shadow: 0 3px 60px 0 rgba(48, 48, 48, 0.5);
-    z-index: 0; }
-    @media screen and (min-width: 600px) {
-      .image-shadow:after {
-        bottom: 14px; } }
-    @media screen and (min-width: 1024px) {
-      .image-shadow:after {
-        bottom: 0; } }
-    @media screen and (min-width: 1280px) {
-      .image-shadow:after {
-        bottom: 22px; } }
-    @media screen and (min-width: 1440px) {
-      .image-shadow:after {
-        bottom: 0; } }
-  .image-shadow img {
-    position: relative;
-    z-index: 1; }
 
 .scroll-indicator-mobile {
   border: solid 1px #dd5655;
