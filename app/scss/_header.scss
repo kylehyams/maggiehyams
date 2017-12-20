@@ -1,23 +1,14 @@
 header {
 	@include span-columns(12);
-	height: 87vh;
+	height: 100vh;
 	background: $slate;
 	@include display(flex);
-	@include flex-direction(row);
+	@include flex-direction(column);
 	@include justify-content(center);
-	@include align-items(flex-end);
-	
-	@media screen and (min-width: $small-screen) {
-		height: 90vh;
-	}
-	
-	@media screen and (min-width: $medium-screen) {
-		height: 100vh;
-	}
+	@include align-items(center);
 	
 	@media screen and (min-width: $large-screen) {
 		@include span-columns(5);
-		height: 100vh;
 		@include display(flex);
 		@include align-items(center);
 		position: fixed;
@@ -27,53 +18,51 @@ header {
 		content: "";
 		@include span-columns(12);
 		@include shift(0);
-		height: 87vh;
+		height: 100vh;
 		background: url(../images/marble_texture.jpg) 0 0 no-repeat;
 		background-size: cover;
 		position: absolute;
 		top: 0;
 		left: 0;
 		z-index: 1;
-		// opacity is controlled via _animations.scss
+		// opacity is controlled via _animations.scss	
+	}
+	
+	.logo-primary {
+		width: 148px;
+		height: auto;
+		position: relative;
+		z-index: 2;
+		margin: 0 0 120px;
 		
 		@media screen and (min-width: $small-screen) {
-			height: 90vh;
+			width: 184px;
 		}
 		
 		@media screen and (min-width: $medium-screen) {
-			height: 100vh;
+			width: 240px;
+		}
+		
+		@media screen and (min-width: $large-screen) {
+			width: 200px;
+			margin: 0;
 		}
 		
 	}
 	
-	.header-container {
-		padding: 0 0 14vh;
-		position: relative;
-		z-index: 2;
+	.scroll-on-page-link {
+		width: 40px;
+		height: 56px;
+		@include position(absolute, null null 56px 50%);
+		@include transform(translate(-50%, 0));
+		z-index: 3;
 		
-		@media screen and (min-width: $small-screen) {
-			padding: 0 0 15vh;
+		@media screen and (min-width: $medium-screen) {
+			bottom: 80px;
 		}
 		
 		@media screen and (min-width: $large-screen) {
-			padding: 0;
-		}
-		
-		.logo-primary {
-			width: 150px;
-			height: auto;
-			margin: 0 0 14vh;
-			
-			@media screen and (min-width: $medium-screen) {
-				width: 250px;
-				margin: 0 0 24vh;
-			}
-			
-			@media screen and (min-width: $large-screen) {
-				width: 200px;
-				margin: 0;
-			}
-			
+			display: none;
 		}
 		
 	}

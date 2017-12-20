@@ -84,39 +84,6 @@ header:before {
 	}
 }
 
-.scroll-indicator-desktop {
-	
-	@media screen and (min-width: $large-screen) {
-		opacity: 0;
-		transform: translateY(-25px);
-		transition: all 750ms $base-timing;
-		transition-delay: 1500ms;
-		
-		.cooked & {
-			opacity: 1;
-			transform: translateY(0);
-		}
-		
-	}
-	
-}
-
-/*
-.wordmark {
-	
-	@media screen and (min-width: $large-screen) {
-		opacity: 0;
-		transition: all 750ms $base-timing;
-		transition-delay: 750ms;
-		
-		.animate & {
-			opacity: 1;
-		}
-		
-	}
-}
-*/
-
 // Fallbacks
 .no-js {
 	
@@ -162,7 +129,7 @@ header:before {
 }
 
 
-// Scroll indicator
+// Scroll indicator animations
 .levitate {
   -webkit-animation-duration: 1500ms;
   animation-duration: 1500ms;
@@ -179,15 +146,15 @@ header:before {
   0%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    -webkit-transform: translate3d(0,-10px,0);
-    transform: translate3d(0,-10px,0);
+    -webkit-transform: translate3d(0,-5px,0);
+    transform: translate3d(0,-5px,0);
   }
   
   50% {
     -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    -webkit-transform: translate3d(0,10px,0);
-    transform: translate3d(0,10px,0);
+    -webkit-transform: translate3d(0,5px,0);
+    transform: translate3d(0,5px,0);
   }
 
 }
@@ -196,15 +163,15 @@ header:before {
   0%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    -webkit-transform: translate3d(0,-10px,0);
-    transform: translate3d(0,-10px,0);
+    -webkit-transform: translate3d(0,-5px,0);
+    transform: translate3d(0,-5px,0);
   }
 
   50% {
     -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,5px,0);
+    transform: translate3d(0,5px,0);
   }
   
 }
