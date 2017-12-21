@@ -13,33 +13,43 @@ footer {
 	.social-container {
 		text-align: left;
 		width: 100%;
-		padding: 2% 0;
+		padding: 5px 0;
 		border: solid 1px $fire;
 		
 		.social {
-			width: 96%;
+			width: 97%;
 			margin: 0 auto;
-			padding: 16px 16px 24px;
+			padding: 24px;
 			border: solid 1px $fire;
+			
+			@media screen and (min-width: $xlarge-screen) {
+				width: 98%;
+			}
+			
+			@media screen and (min-width: $xxlarge-screen) {
+				padding: 24px 48px;
+			}
 			
 			&__instagram {
 				@include display(flex);
 				@include flex-direction(row);
 				@include justify-content(space-between);
 				@include align-items(flex-end);
-				margin: 0 0 16px;
+				margin: 0 0 32px;
 				
 				&-link {
 					font-family: $bagnard-sans-fallback;
 					font-size: 1.4rem;
 					letter-spacing: 0;
-					line-height: 8px;
+					line-height: 14px;
 					font-weight: 400;
 					margin: 0 8px 0 0;
 					
 					.wf-active & {
 						font-family: $heading-font-family;
-						font-size: 1.5rem;
+						font-size: 1.6rem;
+						letter-spacing: 0.25px;
+						line-height: 16px;
 					}
 					
 				}
@@ -47,43 +57,90 @@ footer {
 				&-divider {
 					width: 100%;
 					height: 1px;
-					border-bottom: dotted 1px $fire;
+					border-bottom: solid 1px rgba($fire, 0.2);
 					margin: 0;
 					padding: 0;
 				}
 				
 				&-icon {
+					width: 16px;
+					height: 16px;
 					margin: 0 0 0 8px;
 					
 					a {
 						transition: color $base-duration $base-timing;
 						
 						svg {
-							width: 20px;
+							width: 16px;
 							height: auto;
-							background-position: 0 100%;
-							background-size: contain;
-							position: relative;
-							top: 8px;
-							fill: $action-color;
 							
-							@media screen and (min-width: $small-screen) {
-								width: 23px;
-								top: 7px;
-							}
-							
-							@media screen and (min-width: $medium-screen) {
-								width: 24px;
-								top: 8px;
-							}
+							g {fill: $action-color;}
 							
 						}
 						
 						&:hover {
 							
-							svg {
-								fill: darken($action-color, 20%);
-							}
+							svg > g {fill: darken($action-color, 20%);}
+							
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+			&__linkedin {
+				@include display(flex);
+				@include flex-direction(row);
+				@include justify-content(space-between);
+				@include align-items(flex-end);
+				margin: 0 0 32px;
+				
+				&-link {
+					font-family: $bagnard-sans-fallback;
+					font-size: 1.4rem;
+					letter-spacing: 0;
+					line-height: 14px;
+					font-weight: 400;
+					margin: 0 8px 0 0;
+					
+					.wf-active & {
+						font-family: $heading-font-family;
+						font-size: 1.6rem;
+						letter-spacing: 0.25px;
+						line-height: 16px;
+					}
+					
+				}
+				
+				&-divider {
+					width: 100%;
+					height: 1px;
+					border-bottom: solid 1px rgba($fire, 0.2);
+					margin: 0;
+					padding: 0;
+				}
+				
+				&-icon {
+					width: 16px;
+					height: 16px;
+					margin: 0 0 0 8px;
+					
+					a {
+						transition: color $base-duration $base-timing;
+						
+						svg {
+							width: 16px;
+							height: auto;
+							
+							path {fill: $action-color;}
+							
+						}
+						
+						&:hover {
+							
+							svg > path {fill: darken($action-color, 20%);}
 							
 						}
 						
@@ -104,13 +161,15 @@ footer {
 					font-family: $bagnard-sans-fallback;
 					font-size: 1.4rem;
 					letter-spacing: 0;
-					line-height: 8px;
+					line-height: 14px;
 					font-weight: 400;
 					margin: 0 8px 0 0;
 										
 					.wf-active & {
 						font-family: $heading-font-family;
-						font-size: 1.5rem;
+						font-size: 1.6rem;
+						letter-spacing: 0.25px;
+						line-height: 16px;
 					}
 					
 				}
@@ -118,38 +177,29 @@ footer {
 				&-divider {
 					width: 100%;
 					height: 1px;
-					border-bottom: dotted 1px $fire;
+					border-bottom: solid 1px rgba($fire, 0.2);
 					margin: 0;
 					padding: 0;
 				}
 				
 				&-icon {
+					width: 21px;
+					height: 16px;
 					margin: 0 0 0 8px;
 					
 					a {
 						
 						svg {
 							width: auto;
-							height: 20px;
-							background-position: 0 100%;
-							background-size: contain;
-							position: relative;
-							top: 10px;
-							fill: $action-color;
+							height: 16px;
 							
-							@media screen and (min-width: $small-screen) {
-								height: 23px;
-							}
-							
-							@media screen and (min-width: $medium-screen) {
-								height: 24px;
-							}
+							path {fill: $action-color;}
 							
 						}
 						
 						&:hover {
 							
-							svg {
+							svg > path {
 								fill: darken($action-color, 20%);
 							}
 							
