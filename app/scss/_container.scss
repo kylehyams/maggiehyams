@@ -1,6 +1,9 @@
+body {
+	background: $salt;
+}
+
 .main-container {
 	@include outer-container;
-	background: $salt;
 	height: 100%;
 	position: relative;
 	
@@ -9,6 +12,7 @@
 		content: "";
 		border: solid 1px $fire;
 		display: none;
+		background: none;
 		
 		@media screen and (min-width: $medium-screen) {
 			width: 96vw;

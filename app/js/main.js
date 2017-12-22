@@ -63,11 +63,11 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  var element = document.getElementsByClassName("pre-heat-A");
+  var element = document.getElementsByClassName("pre-heat-experience");
   $(element).addClass('marinate');
 
   $(window).scroll(function() {
-    if( $(".pre-heat-A").length > 0 ) {
+    if( $(".pre-heat-experience").length > 0 ) {
       var elementTopToPageTop = $(element).offset().top;
       var windowTopToPageTop = $(window).scrollTop();
       var windowInnerHeight = window.innerHeight;
@@ -87,11 +87,35 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  var element = document.getElementsByClassName("pre-heat-B");
+  var element = document.getElementsByClassName("pre-heat-highlights");
   $(element).addClass('marinate');
 
   $(window).scroll(function() {
-    if( $(".pre-heat-B").length > 0 ) {
+    if( $(".pre-heat-highlights").length > 0 ) {
+      var elementTopToPageTop = $(element).offset().top;
+      var windowTopToPageTop = $(window).scrollTop();
+      var windowInnerHeight = window.innerHeight;
+      var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
+      var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
+      var distanceFromBottomToAppear = 300;
+
+      if(elementTopToWindowBottom > distanceFromBottomToAppear) {
+        $(element).addClass('grilled');
+      }
+      else if(elementTopToWindowBottom < 0) {
+        $(element).removeClass('grilled');
+        $(element).addClass('marinate');
+      }
+    }
+  });
+});
+
+$(document).ready(function() {
+  var element = document.getElementsByClassName("pre-heat-contact");
+  $(element).addClass('marinate');
+
+  $(window).scroll(function() {
+    if( $(".pre-heat-contact").length > 0 ) {
       var elementTopToPageTop = $(element).offset().top;
       var windowTopToPageTop = $(window).scrollTop();
       var windowInnerHeight = window.innerHeight;

@@ -119,7 +119,7 @@ header:before {
 		}
 	}
 	
-	.scroll-indicator-desktop {
+	.marinate {
 		@media screen and (min-width: $large-screen) {
 			opacity: 1;
 			transform: translateY(0);
