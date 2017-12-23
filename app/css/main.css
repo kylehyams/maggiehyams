@@ -795,7 +795,7 @@ header {
         .content__intro-block aside img {
           box-shadow: 0px 8px 40px rgba(48, 48, 48, 0.24); }
       .content__intro-block article {
-        margin: 24px 0 0; }
+        margin: 32px 0 0; }
         @media screen and (min-width: 600px) {
           .content__intro-block article {
             width: 296px;
@@ -804,7 +804,7 @@ header {
         @media screen and (min-width: 1024px) {
           .content__intro-block article {
             width: inherit;
-            margin: 24px 0 0;
+            margin: 32px 0 0;
             padding: 0; } }
         @media screen and (min-width: 1280px) {
           .content__intro-block article {
@@ -812,7 +812,7 @@ header {
             margin: 40px 0 0;
             padding: 0 0 0 24px; } }
   .content__info {
-    margin: 56px 0 0; }
+    margin: 48px 0 0; }
     @media screen and (min-width: 600px) {
       .content__info {
         width: 71.42857%;
@@ -861,7 +861,7 @@ header {
         flex-direction: column;
         -ms-flex-direction: column;
         margin: 0 auto;
-        padding: 56px 0 0; }
+        padding: 48px 0 0; }
         .content__info:nth-child(even) {
           -webkit-box-orient: vertical;
           -moz-box-orient: vertical;
@@ -887,7 +887,7 @@ header {
         -moz-flex-direction: row-reverse;
         flex-direction: row-reverse;
         -ms-flex-direction: row-reverse;
-        padding: 104px 0 0; }
+        padding: 120px 0 0; }
         .content__info:nth-child(even) {
           -webkit-box-orient: horizontal;
           -moz-box-orient: horizontal;
@@ -964,13 +964,13 @@ header {
 
 footer {
   text-align: center;
-  margin: 56px auto 0; }
+  margin: 48px auto 0; }
   @media screen and (min-width: 600px) {
     footer {
       width: 71.42857%; } }
   @media screen and (min-width: 1024px) {
     footer {
-      margin: 136px auto 80px; } }
+      margin: 120px auto 80px; } }
   footer .social-container {
     text-align: left;
     width: 100%;
@@ -1192,9 +1192,9 @@ footer {
   footer .footer-icon {
     width: 40px;
     height: auto;
-    margin: 88px 0 0; }
+    margin: 64px 0 0; }
     @media screen and (min-width: 1024px) {
       footer .footer-icon {
-        margin: 212px 0 0; } }
+        margin: 192px 0 0; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,13 +1,13 @@
 footer {
 	text-align: center;
-	margin: 56px auto 0;
+	margin: 48px auto 0;
 	
 	@media screen and (min-width: $medium-screen) {
 		width: percentage(5/7);
 	}
 	
 	@media screen and (min-width: $large-screen) {
-		margin: 136px auto 80px;
+		margin: 120px auto 80px;
 	}
 	
 	.social-container {
@@ -218,10 +218,10 @@ footer {
 	.footer-icon {
 		width: 40px;
 		height: auto;
-		margin: 88px 0 0;
+		margin: 64px 0 0;
 		
 		@media screen and (min-width: $large-screen) {
-			margin: 212px 0 0;
+			margin: 192px 0 0;
 		}
 		
 	}

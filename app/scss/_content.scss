@@ -103,7 +103,7 @@
 				}
 				
 				article {
-					margin: 24px 0 0;
+					margin: 32px 0 0;
 					
 					@media screen and (min-width: $medium-screen) {
 						width: 296px;
@@ -113,7 +113,7 @@
 					
 					@media screen and (min-width: $large-screen) {
 						width: inherit;
-						margin: 24px 0 0;
+						margin: 32px 0 0;
 						padding: 0;
 					}
 					
@@ -130,7 +130,7 @@
 		}
 		
 		&__info {
-			margin: 56px 0 0;
+			margin: 48px 0 0;
 			
 			@media screen and (min-width: $medium-screen) {
 				width: percentage(5/7);
@@ -153,7 +153,7 @@
 			@media screen and (min-width: $large-screen) {
 				@include flex-direction(column);
 				margin: 0 auto;
-				padding: 56px 0 0;
+				padding: 48px 0 0;
 				
 				&:nth-child(even) {
 					@include flex-direction(column);
@@ -169,7 +169,7 @@
 			
 			@media screen and (min-width: $xlarge-screen) {
 				@include flex-direction(row-reverse);
-				padding: 104px 0 0;
+				padding: 120px 0 0;
 				
 				&:nth-child(even) {
 					@include flex-direction(row);
