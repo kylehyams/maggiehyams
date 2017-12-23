@@ -631,19 +631,11 @@ header {
       header:last-child {
         margin-right: 0; } }
   header:before {
-    content: "";
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
-    margin-left: 0%;
-    height: 100vh;
-    background: url(../images/marble_texture.jpg) 0 0 no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; }
+    margin-left: 0%; }
     header:before:last-child {
       margin-right: 0; }
   header .logo-primary {

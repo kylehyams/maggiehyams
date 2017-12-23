@@ -15,16 +15,8 @@ header {
 	}
 	
 	&:before {
-		content: "";
 		@include span-columns(12);
 		@include shift(0);
-		height: 100vh;
-		background: url(../images/marble_texture.jpg) 0 0 no-repeat;
-		background-size: cover;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 1;
 		// opacity is controlled via _animations.scss	
 	}
 	

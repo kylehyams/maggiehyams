@@ -61,6 +61,21 @@
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#525252">
 		<meta name="theme-color" content="#525252">
 		<!-- /Favicons -->
+		
+		<!-- Critical CSS -->
+		<style>
+			header:before {
+				content: "";
+				height: 100vh;
+				background: url(../images/marble_texture.jpg) 0 0 no-repeat;
+				background-size: cover;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+		</style>
+		<!-- /Critical CSS -->
         
         <!-- build:css css/main.css -->
         <link rel="stylesheet" href="css/main.css">
