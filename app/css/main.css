@@ -703,6 +703,35 @@ header {
       padding: 0; }
       .content:last-child {
         margin-left: 0; } }
+  .content:before {
+    display: none; }
+    @media screen and (min-width: 1280px) {
+      .content:before {
+        display: inherit;
+        content: "";
+        width: 800px;
+        height: 108px;
+        background: url(../images/maggie_hyams_wordmark.svg) 0 0 no-repeat;
+        background-size: cover;
+        -webkit-transform-origin: center center;
+        -moz-transform-origin: center center;
+        -ms-transform-origin: center center;
+        -o-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        position: fixed;
+        top: 506px;
+        left: 138px;
+        opacity: 0.04; } }
+    @media screen and (min-width: 1440px) {
+      .content:before {
+        position: fixed;
+        top: 506px;
+        left: 205px; } }
   @media screen and (min-width: 600px) {
     .content .wordmark {
       width: 71.42857%;

@@ -18,6 +18,29 @@
 			padding: 0;
 		}
 		
+		// Ghosted wordmark
+		&:before {
+			display: none;
+			
+			@media screen and (min-width: $xlarge-screen) {
+				display: inherit;
+				content: "";
+				width: 800px;
+				height: 108px;
+				background: url(../images/maggie_hyams_wordmark.svg) 0 0 no-repeat;
+				background-size: cover;
+				@include transform-origin(center center);
+				@include transform(rotate(-90deg));
+				@include position(fixed, 506px null null 138px);
+				opacity: 0.04;
+			}
+			
+			@media screen and (min-width: $xxlarge-screen) {
+				@include position(fixed, 506px null null 205px);
+			}
+			
+		}
+		
 		.wordmark {
 			
 			@media screen and (min-width: $medium-screen) {

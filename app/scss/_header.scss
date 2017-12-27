@@ -11,7 +11,7 @@ header {
 		@include span-columns(5);
 		@include display(flex);
 		@include align-items(center);
-		position: fixed;
+		@include position(fixed, null null null null);
 	}
 	
 	&:before {
