@@ -1,3 +1,47 @@
+// Fallbacks
+.no-js {
+	
+	header:before {
+		content: "";
+		opacity: 0.15;		
+	}
+	
+	.logo-primary {
+		transform: translateY(0);
+		
+		.border,
+		.m,
+		.h,
+		.knife {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		
+	}
+	
+	.scroll-indicator-mobile {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	
+	.content__intro-block {
+		@media screen and (min-width: $large-screen) {
+			opacity: 1;
+			transform: translateY(0);
+			transition: all 1000ms $base-timing;
+			transition-delay: 1000ms;			
+		}
+	}
+	
+	.marinate {
+		@media screen and (min-width: $large-screen) {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	
+}
+
 // On load animations
 header:before {
 	content: "";
@@ -55,7 +99,7 @@ header:before {
 	
 }
 
-.scroll-indicator-mobile {
+.scroll-indicator {
 	opacity: 0;
 	transform: translateY(-25px);
 	transition: all 750ms $base-timing;
@@ -68,62 +112,34 @@ header:before {
 	
 }
 
-.content__intro-block {
+.content__intro {
 	
-	@media screen and (min-width: $large-screen) {
-		opacity: 0;
-		transform: translateY(-25px);
-		transition: all 1000ms $base-timing;
-		transition-delay: 1000ms;
-		
-		.cooked & {
-			opacity: 1;
-			transform: translateY(0);
-		}
-		
-	}
-}
-
-// Fallbacks
-.no-js {
+	&.marinate {
 	
-	header:before {
-		content: "";
-		opacity: 0.15;		
-	}
-	
-	.logo-primary {
-		transform: translateY(0);
-		
-		.border,
-		.m,
-		.h,
-		.knife {
-			opacity: 1;
-			transform: translateY(0);
-		}
-		
-	}
-	
-	.scroll-indicator-mobile {
-		opacity: 1;
-		transform: translateY(0);
-	}
-	
-	.content__intro-block {
+		// Remove scrolling fade-in styling for screens 1024px and up
 		@media screen and (min-width: $large-screen) {
 			opacity: 1;
 			transform: translateY(0);
+		}
+	
+	}
+	
+	&-block {
+	
+		// Fade-in styling for screens 1024px and up
+		@media screen and (min-width: $large-screen) {
+			opacity: 0;
+			transform: translateY(25px);
 			transition: all 1000ms $base-timing;
-			transition-delay: 1000ms;			
+			transition-delay: 1000ms;
+			
+			.cooked & {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			
 		}
-	}
-	
-	.marinate {
-		@media screen and (min-width: $large-screen) {
-			opacity: 1;
-			transform: translateY(0);
-		}
+		
 	}
 	
 }
@@ -186,20 +202,12 @@ header:before {
 
 // Fade in elements on scroll
 .marinate {
-	
-	@media screen and (min-width: $large-screen) {
-		opacity: 0;
-		transform: translateY(25px);
-	}
-	
+	opacity: 0;
+	transform: translateY(25px);
 }
 
 .grilled {
-	
-	@media screen and (min-width: $large-screen) {
-		opacity: 1;
-		transform: translateY(0);
-		transition: all 750ms $base-timing;
-	}
-	
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 750ms $base-timing;
 }

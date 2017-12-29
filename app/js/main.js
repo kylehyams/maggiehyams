@@ -5,7 +5,7 @@ $(document).ready(function() {
 });
 
 
-// Smooth scrolling for anchor links
+// Smooth scrolling for mobile anchor link
 (function (jQuery) {
 	jQuery.mark = {
 		jump: function (options) {
@@ -20,7 +20,7 @@ $(document).ready(function() {
 				return jQuery(options.selector).click(function (e) {
 				var jumpobj = jQuery(this);
 				var target = jumpobj.attr('href');
-				var thespeed = 1250;
+				var thespeed = 1200;
 				var offset = jQuery(target).offset().top;
 				jQuery('html,body').animate({
 					scrollTop: offset
@@ -39,17 +39,17 @@ jQuery(function(){
 
 // Add class to fade-in content once its a certain amount of pixels from the bottom of the viewport
 $(document).ready(function() {
-  var element = document.getElementById("intro-desktop");
+  var element = document.getElementsByClassName("pre-heat-intro");
   $(element).addClass('marinate');
 
   $(window).scroll(function() {
-    if( $("#intro-desktop").length > 0 ) {
+    if( $(".pre-heat-intro").length > 0 ) {
       var elementTopToPageTop = $(element).offset().top;
       var windowTopToPageTop = $(window).scrollTop();
       var windowInnerHeight = window.innerHeight;
       var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
       var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
-      var distanceFromBottomToAppear = 300;
+      var distanceFromBottomToAppear = 240;
 
       if(elementTopToWindowBottom > distanceFromBottomToAppear) {
         $(element).addClass('grilled');
@@ -73,7 +73,7 @@ $(document).ready(function() {
       var windowInnerHeight = window.innerHeight;
       var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
       var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
-      var distanceFromBottomToAppear = 300;
+      var distanceFromBottomToAppear = 240;
 
       if(elementTopToWindowBottom > distanceFromBottomToAppear) {
         $(element).addClass('grilled');
@@ -97,7 +97,7 @@ $(document).ready(function() {
       var windowInnerHeight = window.innerHeight;
       var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
       var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
-      var distanceFromBottomToAppear = 300;
+      var distanceFromBottomToAppear = 240;
 
       if(elementTopToWindowBottom > distanceFromBottomToAppear) {
         $(element).addClass('grilled');
@@ -121,7 +121,7 @@ $(document).ready(function() {
       var windowInnerHeight = window.innerHeight;
       var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
       var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
-      var distanceFromBottomToAppear = 300;
+      var distanceFromBottomToAppear = 240;
 
       if(elementTopToWindowBottom > distanceFromBottomToAppear) {
         $(element).addClass('grilled');
