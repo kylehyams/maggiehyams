@@ -68,13 +68,15 @@ footer {
 					margin: 0 0 0 8px;
 					
 					a {
-						transition: color $base-duration $base-timing;
 						
 						svg {
 							width: 16px;
 							height: auto;
 							
-							g {fill: $action-color;}
+							g {
+								fill: $action-color;
+								transition: color $base-duration $base-timing;
+							}
 							
 						}
 						
@@ -128,13 +130,15 @@ footer {
 					margin: 0 0 0 8px;
 					
 					a {
-						transition: color $base-duration $base-timing;
 						
 						svg {
 							width: 16px;
 							height: auto;
 							
-							path {fill: $action-color;}
+							path {
+								fill: $action-color;
+								transition: color $base-duration $base-timing;
+							}
 							
 						}
 						
@@ -193,7 +197,10 @@ footer {
 							width: auto;
 							height: 16px;
 							
-							path {fill: $action-color;}
+							path {
+								fill: $action-color;
+								transition: color $base-duration $base-timing;
+							}
 							
 						}
 						

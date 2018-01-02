@@ -1078,15 +1078,14 @@ footer {
           width: 16px;
           height: 16px;
           margin: 0 0 0 8px; }
-          footer .social-container .social__instagram-icon a {
-            transition: color 250ms cubic-bezier(0.39, 0.575, 0.565, 1); }
-            footer .social-container .social__instagram-icon a svg {
-              width: 16px;
-              height: auto; }
-              footer .social-container .social__instagram-icon a svg g {
-                fill: #dd5655; }
-            footer .social-container .social__instagram-icon a:hover svg > g {
-              fill: #aa2322; }
+          footer .social-container .social__instagram-icon a svg {
+            width: 16px;
+            height: auto; }
+            footer .social-container .social__instagram-icon a svg g {
+              fill: #dd5655;
+              transition: color 250ms cubic-bezier(0.39, 0.575, 0.565, 1); }
+          footer .social-container .social__instagram-icon a:hover svg > g {
+            fill: #aa2322; }
       footer .social-container .social__linkedin {
         display: -webkit-box;
         display: -moz-box;
@@ -1146,15 +1145,14 @@ footer {
           width: 16px;
           height: 16px;
           margin: 0 0 0 8px; }
-          footer .social-container .social__linkedin-icon a {
-            transition: color 250ms cubic-bezier(0.39, 0.575, 0.565, 1); }
-            footer .social-container .social__linkedin-icon a svg {
-              width: 16px;
-              height: auto; }
-              footer .social-container .social__linkedin-icon a svg path {
-                fill: #dd5655; }
-            footer .social-container .social__linkedin-icon a:hover svg > path {
-              fill: #aa2322; }
+          footer .social-container .social__linkedin-icon a svg {
+            width: 16px;
+            height: auto; }
+            footer .social-container .social__linkedin-icon a svg path {
+              fill: #dd5655;
+              transition: color 250ms cubic-bezier(0.39, 0.575, 0.565, 1); }
+          footer .social-container .social__linkedin-icon a:hover svg > path {
+            fill: #aa2322; }
       footer .social-container .social__email {
         display: -webkit-box;
         display: -moz-box;
@@ -1218,7 +1216,8 @@ footer {
             width: auto;
             height: 16px; }
             footer .social-container .social__email-icon a svg path {
-              fill: #dd5655; }
+              fill: #dd5655;
+              transition: color 250ms cubic-bezier(0.39, 0.575, 0.565, 1); }
           footer .social-container .social__email-icon a:hover svg > path {
             fill: #aa2322; }
   footer .footer-icon {
