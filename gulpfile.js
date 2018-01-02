@@ -9,7 +9,6 @@ var gulp 		= require('gulp'),
 	uglify		= require('gulp-uglify'),
 	gulpIf		= require('gulp-if'),
 	cssnano		= require('gulp-cssnano'),
-	imagemin	= require('gulp-imagemin'),
 	cache		= require('gulp-cache'),
 	del			= require('del'),
 	runSequence	= require('run-sequence');
@@ -33,7 +32,7 @@ gulp.task('sass', function() {
 	return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children directories
 		.pipe(sourcemaps.init())
 		.pipe(sass({
-			outputStyle: 'compressed'
+			outputStyle: 'nested'
 		}))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('app/css'))
@@ -46,25 +45,29 @@ gulp.task('sass', function() {
 gulp.task('useref', function() {
 	return gulp.src('app/*html')
 		.pipe(useref())
-		// Minifies only if it's a JavaScript file
-		.pipe(gulpIf('*.js', uglify()))
 		// Minifies only if it's a CSS file
 		.pipe(gulpIf('*.css', cssnano()))
+		// Minifies only if it's a JavaScript file
+		.pipe(gulpIf('*.js', uglify()))
 		.pipe(gulp.dest('dist'))
 });
 
+// Transfer sourcemap to Dist
+gulp.task('transfer-sourcemap', function() {
+	return gulp.src('app/css/main.css.map')
+	.pipe(gulp.dest('dist/css'))
+});
+
 // Transfer fonts to Dist
-gulp.task('fonts', function() {
+gulp.task('transfer-fonts', function() {
 	return gulp.src('app/fonts/**/*')
 	.pipe(gulp.dest('dist/fonts'))
 });
 
-// Minify images
-gulp.task('images', function(){
-  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
-  // Caching images that ran through imagemin
-  .pipe(cache(imagemin()))
-  .pipe(gulp.dest('dist/images'))
+// Transfer images to Dist
+gulp.task('transfer-images', function() {
+	return gulp.src('app/images/**/*')
+	.pipe(gulp.dest('dist/images'))
 });
 
 // Cleaning generated files
@@ -88,8 +91,8 @@ gulp.task('default', function(callback) {
 
 // Build sequence
 gulp.task('build', function(callback) {
-	runSequence('clean:dist', 
-		['useref', 'sass', 'images', 'fonts'],
+	runSequence('clean:dist',
+		['sass', 'useref', 'transfer-sourcemap', 'transfer-images', 'transfer-fonts'],
 		callback
 	);
 });

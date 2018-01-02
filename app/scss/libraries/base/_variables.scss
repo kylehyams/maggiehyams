@@ -23,21 +23,15 @@ $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
-// Default Colors
-$blue: #1565c0;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
-
-// Maggie's Colors
-$salt: #fff;
-$pepper: #171717;
+// Colors
+$flour: #fff;
+$salt: #fcfcfc;
+$pepper: #303030;
 $slate: #525252;
 $fire: #dd5655;
-$marble: #fcfcfc;
 
 // Font Colors
-$base-font-color: $slate;
+$base-font-color: $pepper;
 $action-color: $fire;
 
 // Border
@@ -45,7 +39,7 @@ $base-border-color: $fire;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$base-background-color: #fff;
+$base-background-color: $flour;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Forms

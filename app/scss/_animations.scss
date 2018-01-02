@@ -1,5 +1,151 @@
-//Animations
+// Fallbacks
+.no-js {
+	
+	header:before {
+		content: "";
+		opacity: 0.15;		
+	}
+	
+	.logo-primary {
+		transform: translateY(0);
+		
+		.border,
+		.m,
+		.h,
+		.knife {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		
+	}
+	
+	.scroll-indicator-mobile {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	
+	.content__intro-block {
+		@media screen and (min-width: $large-screen) {
+			opacity: 1;
+			transform: translateY(0);
+			transition: all 1000ms $base-timing;
+			transition-delay: 1000ms;			
+		}
+	}
+	
+	.marinate {
+		@media screen and (min-width: $large-screen) {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	
+}
 
+// On load animations
+header:before {
+	content: "";
+	opacity: 0;
+	transition: all 500ms $base-timing;
+	
+	.cooked & {
+		opacity: 0.25;
+	}
+	
+}
+
+.logo-primary {
+	transform: translateY(-50px);
+	transition: all 1000ms $base-timing;
+	
+	.border {
+		opacity: 0;
+		transition: all 750ms $base-timing;
+	}
+	
+	.m {
+		opacity: 0;
+		transform: translateY(-20px);
+		transition: all 750ms $base-timing;
+		transition-delay: 250ms;
+	}
+	
+	.h {
+		opacity: 0;
+		transform: translateY(-20px);
+		transition: all 750ms $base-timing;
+		transition-delay: 500ms;
+	}
+	
+	.knife {
+		opacity: 0;
+		transform: translateY(-20px);
+		transition: all 750ms $base-timing;
+		transition-delay: 750ms;
+	}
+	
+	.cooked & {
+		transform: translateY(0);
+		
+		.border,
+		.m,
+		.h,
+		.knife {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		
+	}
+	
+}
+
+.scroll-indicator {
+	opacity: 0;
+	transform: translateY(-25px);
+	transition: all 750ms $base-timing;
+	transition-delay: 500ms;
+	
+	.cooked & {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	
+}
+
+.content__intro {
+	
+	&.marinate {
+	
+		// Remove scrolling fade-in styling for screens 1024px and up
+		@media screen and (min-width: $large-screen) {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	
+	}
+	
+	&-block {
+	
+		// Fade-in styling for screens 1024px and up
+		@media screen and (min-width: $large-screen) {
+			opacity: 0;
+			transform: translateY(25px);
+			transition: all 1000ms $base-timing;
+			transition-delay: 1000ms;
+			
+			.cooked & {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			
+		}
+		
+	}
+	
+}
+
+
+// Scroll indicator animations
 .levitate {
   -webkit-animation-duration: 1500ms;
   animation-duration: 1500ms;
@@ -16,15 +162,15 @@
   0%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    -webkit-transform: translate3d(0,-10px,0);
-    transform: translate3d(0,-10px,0);
+    -webkit-transform: translate3d(0,-5px,0);
+    transform: translate3d(0,-5px,0);
   }
   
   50% {
     -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    -webkit-transform: translate3d(0,10px,0);
-    transform: translate3d(0,10px,0);
+    -webkit-transform: translate3d(0,5px,0);
+    transform: translate3d(0,5px,0);
   }
 
 }
@@ -33,15 +179,15 @@
   0%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    -webkit-transform: translate3d(0,-10px,0);
-    transform: translate3d(0,-10px,0);
+    -webkit-transform: translate3d(0,-5px,0);
+    transform: translate3d(0,-5px,0);
   }
 
   50% {
     -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,5px,0);
+    transform: translate3d(0,5px,0);
   }
   
 }
@@ -51,4 +197,17 @@
   animation-name: bounce;
   -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
+}
+
+
+// Fade in elements on scroll
+.marinate {
+	opacity: 0;
+	transform: translateY(25px);
+}
+
+.grilled {
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 750ms $base-timing;
 }

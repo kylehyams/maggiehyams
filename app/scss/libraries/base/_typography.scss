@@ -3,13 +3,31 @@ html {
 }
 
 body {
-  color: $base-font-color;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  font-weight: 400;
-  text-align: left;
-  -webkit-font-smoothing: antialiased;
+	color: $base-font-color;
+	font-family: $quattrocento-fallback;
+	font-size: 1.4rem;
+	letter-spacing: 0.5px;
+	line-height: 22px;
+	font-weight: 400;
+	text-align: left;
+	-webkit-font-smoothing: antialiased;
+  
+	// Removed fallback styling on larger screens so that intro animations don't look janky
+	@media screen and (min-width: $large-screen) {
+		font-family: $base-font-family;
+		font-size: 1.6rem;
+		letter-spacing: 0.25px;
+		line-height: 24px;
+	}
+  
+	.wf-active & {
+		font-family: $base-font-family;
+		font-size: 1.6rem;
+		letter-spacing: 0.25px;
+		line-height: 24px;
+	
+	}
+  
 }
 
 h1,
@@ -18,103 +36,181 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
-  font-weight: 400;
-  // font-size: modular-scale(1);
-  // line-height: $heading-line-height;
-  // margin: 0 0 $small-spacing;
+	font-family: $bagnard-sans-fallback;
+	font-weight: 400;
+	
+	.wf-active & {
+		font-family: $heading-font-family;
+		letter-spacing: normal;
+	}
+  
 }
 
 h1 {
-	font-size: 2.8rem;
+	font-size: 2.7rem;
 	line-height: 34px;
 	
-	@media screen and (min-width: $large-screen) {
-		font-size: 2.6rem;
+	.wf-active & {
+		font-size: 2.8rem;
 		line-height: 32px;
 	}
 	
 }
 
 h2 {
-	font-size: 2.6rem;
-	line-height: 32px;
-	
-	@media screen and (min-width: $large-screen) {
-		font-size: 2.4rem;
-		line-height: 30px;
-	}
-	
+	font-size: 2.4rem;
+	line-height: 28px;
 }
 
 h3 {
-	font-size: 1.8rem;
-	letter-spacing: 1;
-	line-height: 22px;
-	margin: 4px 0;
+	font-size: 1.6rem;
+	letter-spacing: 0.25;
+	line-height: 20px;
+	margin: 8px 0 0;
+}
+
+h4 {
+	color: $fire;
+	font-family: $oswald-fallback;
+	font-size: 1.3rem;
+	font-weight: 400;
+	letter-spacing: 2px;
+	line-height: 12px;
+	text-transform: uppercase;
 	
-	@media screen and (min-width: $large-screen) {
-		font-size: 1.6rem;
-		line-height: 22px;
+	.wf-active & {
+		font-family: $condensed-font-family;
+		font-size: 1.2rem;
+		letter-spacing: 1.5px;
 	}
 	
 }
 
 p {
-	// margin: 0 0 $small-spacing;
-	font-size: 1.6rem;
-	letter-spacing: 0.25px;
-	line-height: 24px;
 	margin: 16px 0 0;
-	
-	@media screen and (min-width: $large-screen) {
-		font-size: 1.4rem;
-		line-height: 22px;
-	}
-	
 }
 
 a {
-  color: $action-color;
-  text-decoration: none;
-  transition: color $base-duration $base-timing;
-
-  &:active,
-  &:focus,
-  &:hover {
-    color: darken($action-color, 20%);
-  }
+	color: $action-color;
+	text-decoration: none;
+	transition: color $base-duration $base-timing;
+	
+	&:active,
+	&:focus,
+	&:hover {
+		color: darken($action-color, 20%);
+	}
 }
 
 ul {
-	margin: 16px 0 0;
 	
-	@media screen and (min-width: $large-screen) {
-		margin: 24px 0 0;
-	}
+	margin: 0;
+	padding: 0;
 	
 	li {
-		font-size: 1.6rem;
-		letter-spacing: 0.25px;
-		line-height: 24px;
 		margin: 0;
 		padding: 0;
+	}
+	
+	&.list {
+		margin: 8px 0 0;
+		padding: 0 0 0 8px;
 		
 		@media screen and (min-width: $large-screen) {
-			font-size: 1.4rem;
-			line-height: 22px;
+			margin: 24px 0 0;
 		}
 		
-		&.label {
-			color: $fire;
-			font-family: $oswald;
-			font-size: 1.2rem;
-			font-weight: 400;
-			letter-spacing: 1.5px;
-			line-height: 12px;
-			text-transform: uppercase;
+		li {
+			margin: 4px 0 0;
+			padding: 0 0 0 20px;
+			position: relative;
+			
+			&:first-child {margin: 0;}
+			
+			// Bullet for each list item
+			&:before {
+				content: "";
+				width: 12px;
+				height: 3px;
+				background: url(../../../images/maggie_hyams_blade.svg) 0 0 no-repeat;
+				background-size: cover;
+				position: absolute;
+				top: 10px;
+				left: 0;
+			}
+			
 		}
 		
+		
+		// Repositioning the list images as the text alignments shift
+		.content__info & {
+				
+			@media screen and (min-width: $medium-screen) {
+				padding: 0 8px 0 0;
+					
+				li {
+					padding: 0 20px 0 0;
+					
+					&:before {
+						left: auto;
+						right: 0;
+						@include transform(scaleX(-1));
+					}
+					
+				}
+				
+				&:nth-child(even) {
+					padding: 0 0 0 8px;
+					
+						li {
+							padding: 0 0 0 20px;
+							
+							&:before {
+								left: 0;
+								right: auto;
+								@include transform(scaleX(1));
+							}
+						
+						}
+						
+				}
+					
+			}
+			
+			@media screen and (min-width: $large-screen) {
+				padding: 0 0 0 8px;
+					
+				li {
+					padding: 0 0 0 20px;
+					
+					&:before {
+						left: 0;
+						right: auto;
+						@include transform(scaleX(1));	
+					}
+					
+				}
+				
+			}
+			
+			@media screen and (min-width: $xlarge-screen) {
+				padding: 0 8px 0 0;
+					
+				li {
+					padding: 0 20px 0 0;
+					
+					&:before {
+						left: auto;
+						right: 0;
+						@include transform(scaleX(-1));
+					}
+					
+				}
+				
+			}
+			
+		}
+	
 	}
 	
 }
