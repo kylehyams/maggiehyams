@@ -48,4 +48,5 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 
 // Animations
 $base-duration: 250ms;
+$fast-duration: 125ms;
 $base-timing: cubic-bezier(0.39, 0.575, 0.565, 1);
