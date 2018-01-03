@@ -72,17 +72,13 @@ footer {
 						svg {
 							width: 16px;
 							height: auto;
-							
-							g {
-								fill: $action-color;
-								transition: color $base-duration $base-timing;
-							}
-							
+							fill: $action-color;
+							transition: color $fast-duration $base-timing;
 						}
 						
 						&:hover {
 							
-							svg > g {fill: darken($action-color, 20%);}
+							svg {fill: darken($action-color, 20%);}
 							
 						}
 						
@@ -134,17 +130,13 @@ footer {
 						svg {
 							width: 16px;
 							height: auto;
-							
-							path {
-								fill: $action-color;
-								transition: color $base-duration $base-timing;
-							}
-							
+							fill: $action-color;
+							transition: color $fast-duration $base-timing;
 						}
 						
 						&:hover {
 							
-							svg > path {fill: darken($action-color, 20%);}
+							svg {fill: darken($action-color, 20%);}
 							
 						}
 						
@@ -196,19 +188,13 @@ footer {
 						svg {
 							width: auto;
 							height: 16px;
-							
-							path {
-								fill: $action-color;
-								transition: color $base-duration $base-timing;
-							}
-							
+							fill: $action-color;
+							transition: color $fast-duration $base-timing;
 						}
 						
 						&:hover {
 							
-							svg > path {
-								fill: darken($action-color, 20%);
-							}
+							svg {fill: darken($action-color, 20%);}
 							
 						}
 												
