@@ -1,7 +1,7 @@
 header {
 	@include span-columns(12);
 	height: 100vh;
-	background: $slate;
+	background: $pepper;
 	@include display(flex);
 	@include flex-direction(column);
 	@include justify-content(center);
