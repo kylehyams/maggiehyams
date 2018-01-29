@@ -131,7 +131,7 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
     input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover {
       border: 1px solid #dd5655; }
   input[type="color"]::placeholder, input[type="date"]::placeholder, input[type="datetime"]::placeholder, input[type="datetime-local"]::placeholder, input[type="email"]::placeholder, input[type="month"]::placeholder, input[type="number"]::placeholder, input[type="password"]::placeholder, input[type="search"]::placeholder, input[type="tel"]::placeholder, input[type="text"]::placeholder, input[type="time"]::placeholder, input[type="url"]::placeholder, input[type="week"]::placeholder, input:not([type])::placeholder, textarea::placeholder {
-    color: #838383; }
+    color: #979797; }
 
 textarea {
   resize: vertical; }
@@ -210,7 +210,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  color: #303030;
+  color: #525252;
   font-family: "Verdana", "Geneva", sans-serif;
   font-size: 1.4rem;
   letter-spacing: 0.5px;
@@ -237,7 +237,8 @@ h4,
 h5,
 h6 {
   font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  color: #303030; }
   .wf-active h1, .wf-active
   h2, .wf-active
   h3, .wf-active
@@ -570,7 +571,7 @@ header {
   margin-right: 0%;
   width: 100%;
   height: 100vh;
-  background: #525252;
+  background: #303030;
   display: -webkit-box;
   display: -moz-box;
   display: box;

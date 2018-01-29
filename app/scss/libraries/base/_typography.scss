@@ -38,6 +38,7 @@ h5,
 h6 {
 	font-family: $bagnard-sans-fallback;
 	font-weight: 400;
+	color: $pepper;
 	
 	.wf-active & {
 		font-family: $heading-font-family;
